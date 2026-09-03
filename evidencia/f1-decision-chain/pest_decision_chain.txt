@@ -1,0 +1,38 @@
+
+   PASS  Tests\Feature\DecisionChainTest
+  ✓ it una decisión nace propuesta: nadie la declara norma al crearla   74.51s  
+  ✓ it Postgres rechaza promover una decisión sin la firma que la autor… 0.10s  
+  ✓ it un agente no puede poner la firma que promueve: firmar es humano  0.20s  
+  ✓ it la firma de alguien sin el rol human_admin no promueve nada       0.10s  
+  ✓ it un humano con rol human_admin firma promuevo y la decisión queda… 0.17s  
+  ✓ it cambiar el contenido después de firmar invalida la promoción      0.11s  
+  ✓ it promover no mueve la huella: el estado no es contenido sustantiv… 0.16s  
+  ✓ it nacer vigente es imposible: el INSERT directo pasa por el mismo…  0.09s  
+  ✓ it una decisión vigente sin quién la promovió no existe              0.17s  
+  ✓ it Postgres rechaza dejar superada una decisión sin decisión suceso… 0.11s  
+  ✓ it con su sucesora y el motivo, la decisión sí queda superada        0.18s  
+  ✓ it nacer superada es imposible: el INSERT directo también exige suc… 0.11s  
+  ✓ it la decisión que reemplaza a otra no se puede borrar               0.18s  
+  ✓ it borrar la única arista de una superada la deja huérfana: rechaza… 0.10s  
+  ✓ it reapuntar la predecesora de la única arista de una superada tamb… 0.21s  
+  ✓ it reapuntar sólo la sucesora de una superada no la deja huérfana:…  0.17s  
+  ✓ it borrar una arista de una superada con otro sucesor vivo no la de… 0.11s  
+  ✓ it descartar no exige sucesora: lo descartado nunca llegó a ser nor… 0.16s  
+  ✓ it una arista de reemplazo sin motivo no entra                       0.10s  
+  ✓ it una decisión no se reemplaza a sí misma                           0.18s  
+  ✓ it rechaza el ciclo corto A → B → A nombrando el ciclo               0.11s  
+  ✓ it rechaza también la cadena larga A → B → C → A                     0.17s  
+  ✓ it reapuntar una arista ya escrita tampoco puede cerrar un ciclo     0.11s  
+  ✓ it una cadena de reemplazos sin ciclo sí se deja escribir            0.18s  
+  ✓ it Postgres rechaza un invariante confirmado sin evidencia           0.08s  
+  ✓ it tampoco cuela una evidencia vacía                                 0.15s  
+  ✓ it un invariante confirmado con su ancla ruta:símbolo entra          0.10s  
+  ✓ it lo que no está anclado no se prohíbe: se etiqueta inferido        0.21s  
+  ✓ it una contradicción nace pendiente                                  0.17s  
+  ✓ it Postgres rechaza resolver una contradicción sin decir quién y cu… 0.11s  
+  ✓ it resuelta con quien la resolvió y cuándo, la contradicción se cie… 0.15s  
+
+  Tests:    31 passed (62 assertions)
+  Duration: 78.82s
+
+exit=0

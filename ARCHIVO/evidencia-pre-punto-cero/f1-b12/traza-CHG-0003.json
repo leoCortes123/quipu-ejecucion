@@ -1,0 +1,258 @@
+{
+  "data": {
+    "cambio": {
+      "id": 4,
+      "codigo": "CHG-0003",
+      "titulo": "Cobrar la cuota por transferencia bancaria y domiciliaci\u00f3n SEPA",
+      "contexto": "Los residentes sin tarjeta hoy no pueden pagar en la web y acaban en la oficina con el recibo en la mano.",
+      "tipo": "normal",
+      "riesgo": "medio",
+      "estado": "autorizado",
+      "created_at": "2026-07-21T05:55:15.000000Z",
+      "solicitante": "Marta Ruiz",
+      "analista": "Administrador (claude-code)",
+      "gate": {
+        "closeable": false,
+        "gates": [
+          {
+            "gate": "requisitos_especificados",
+            "ok": true,
+            "missing": 0,
+            "detalle": "1 requisito(s), todos con criterios."
+          },
+          {
+            "gate": "criterios_cubiertos",
+            "ok": false,
+            "missing": 2,
+            "detalle": "Sin criterio de bloque cumplido que los satisfaga: REQ-0002/CR-01, REQ-0002/CR-02. Enlaza el criterio del bloque que los prueba con un enlace \"satisface\"."
+          },
+          {
+            "gate": "bloques_terminados",
+            "ok": false,
+            "missing": 2,
+            "detalle": "Sin terminar: PAG-B01 (in_progress), PAG-B02 (in_progress)."
+          },
+          {
+            "gate": "firmas_vigentes",
+            "ok": false,
+            "missing": 1,
+            "detalle": "Firmas sobre contenido que ya cambi\u00f3: \"autorizo\" de admin sobre cambio CHG-0003. El texto se edit\u00f3 despu\u00e9s de firmarlo, as\u00ed que la firma no dice nada del contenido actual: hay que volver a firmarlo."
+          },
+          {
+            "gate": "enlaces_confiables",
+            "ok": false,
+            "missing": 2,
+            "detalle": "Enlaces sin revalidar: #3 origina (necesidad\u2192cambio, sospechoso), #4 especifica (cambio\u2192requisito, sospechoso). Alguien tiene que volver a mirarlos y confirmar que siguen siendo ciertos antes de cerrar."
+          },
+          {
+            "gate": "aceptacion_firmada",
+            "ok": false,
+            "missing": 1,
+            "detalle": "Falta la firma \"acepto\" sobre este cambio. Cerrar es afirmar que lo entregado es lo que se pidi\u00f3, y eso lo dice una persona."
+          }
+        ]
+      },
+      "transiciones": [
+        {
+          "desde": "borrador",
+          "hasta": "en_analisis",
+          "canal": "ui",
+          "motivo": null,
+          "fecha": "2026-07-21 05:56:53+00",
+          "actor": {
+            "nombre": "Administrador",
+            "es_agente": false,
+            "responsable": "Administrador"
+          }
+        },
+        {
+          "desde": "en_analisis",
+          "hasta": "autorizado",
+          "canal": "ui",
+          "motivo": null,
+          "fecha": "2026-07-21 05:57:05+00",
+          "actor": {
+            "nombre": "Administrador",
+            "es_agente": false,
+            "responsable": "Administrador"
+          }
+        }
+      ]
+    },
+    "necesidades": [
+      {
+        "id": 2,
+        "codigo": "NEC-0001",
+        "titulo": "Las facturas no cuadran",
+        "relato": "El total no coincide con la suma de las filas. Desde el martes. Adem\u00e1s, en el cierre de mes se duplican las l\u00edneas.",
+        "origen": "usuario",
+        "naturaleza": "incidente",
+        "estado": "registrada",
+        "fecha": "2026-07-20 16:57:36+00",
+        "reportado_por": "Administrador",
+        "registrado_por": {
+          "nombre": "Administrador",
+          "es_agente": false,
+          "responsable": "Administrador"
+        }
+      }
+    ],
+    "requisitos": [
+      {
+        "id": 2,
+        "codigo": "REQ-0002",
+        "enunciado": "El sistema debe aceptar transferencias identificadas por una referencia \u00fanica y saldar la cuota al conciliarlas.",
+        "tipo": "funcional",
+        "estado": "borrador",
+        "justificacion": null,
+        "redactado_por": "Administrador",
+        "fecha": "2026-07-21T05:55:56.000000Z",
+        "criterios": [
+          {
+            "id": 2,
+            "codigo": "CR-01",
+            "dado": "un residente con una cuota pendiente",
+            "cuando": "registra una transferencia con la referencia de su recibo",
+            "entonces": "la cuota queda saldada y consta el comprobante en su estado de cuenta",
+            "cumplido": false
+          },
+          {
+            "id": 3,
+            "codigo": "CR-02",
+            "dado": "una transferencia con una referencia que no existe",
+            "cuando": "se intenta conciliar",
+            "entonces": "queda en revisi\u00f3n manual y nadie ve su deuda saldada",
+            "cumplido": false
+          }
+        ],
+        "cobertura": {
+          "total": 2,
+          "cumplidos": 0,
+          "completo": false
+        }
+      }
+    ],
+    "bloques": [
+      {
+        "id": 1,
+        "full_id": "PAG-B01",
+        "titulo": "Registro y conciliaci\u00f3n de transferencias",
+        "estado": "in_progress",
+        "feature": "Pagos por transferencia",
+        "aprobado_por": null,
+        "aprobado_at": null
+      },
+      {
+        "id": 2,
+        "full_id": "PAG-B02",
+        "titulo": "Pantalla de registro de pago",
+        "estado": "in_progress",
+        "feature": "Pagos por transferencia",
+        "aprobado_por": null,
+        "aprobado_at": null
+      }
+    ],
+    "evidencia": [
+      {
+        "id": 1,
+        "tipo": "ci_output",
+        "titulo": "composer ci",
+        "fecha": "2026-07-18 05:56:35.481388+00",
+        "bloque": "PAG-B01",
+        "tamano": 134,
+        "autor": {
+          "nombre": "Administrador (claude-code)",
+          "es_agente": true,
+          "responsable": "Administrador"
+        },
+        "criterios": []
+      },
+      {
+        "id": 2,
+        "tipo": "curl_response",
+        "titulo": "POST /api/pagos/transferencia \u2014 201",
+        "fecha": "2026-07-18 05:56:35.481388+00",
+        "bloque": "PAG-B01",
+        "tamano": 140,
+        "autor": {
+          "nombre": "Administrador (claude-code)",
+          "es_agente": true,
+          "responsable": "Administrador"
+        },
+        "criterios": []
+      }
+    ],
+    "firmas": [
+      {
+        "id": 3,
+        "entidad_tipo": "cambio",
+        "entidad_id": 4,
+        "significado": "autorizo",
+        "significado_display": "Autoriz\u00f3",
+        "firmante_id": 1,
+        "firmante": "Administrador",
+        "huella_firmada": "98297a3d83728608b1ea27f630371e008eed2d09d2a8e5a4a5c481cc061eaab0",
+        "canal": "api",
+        "firmado_at": "2026-07-21 05:57:16.111503+00",
+        "vigente": true
+      },
+      {
+        "id": 2,
+        "entidad_tipo": "cambio",
+        "entidad_id": 4,
+        "significado": "autorizo",
+        "significado_display": "Autoriz\u00f3",
+        "firmante_id": 1,
+        "firmante": "Administrador",
+        "huella_firmada": "09735c165b9a4b780bf7a2e3ca4b0a5baacd3674439471c6437bd7fd1df5952a",
+        "canal": "api",
+        "firmado_at": "2026-07-21 05:56:53.188536+00",
+        "vigente": false
+      }
+    ],
+    "sospechas": [
+      {
+        "id": 1,
+        "eslabon": "necesidad",
+        "tipo": "impacta",
+        "origen": {
+          "tipo": "necesidad",
+          "id": 2
+        },
+        "destino": {
+          "tipo": "pantalla_curl",
+          "id": 1
+        },
+        "motivo_sospecha": "El necesidad #2 cambi\u00f3 de contenido el 2026-07-21 05:38:55 UTC. Este enlace se valid\u00f3 contra otro contenido y hay que revisarlo."
+      },
+      {
+        "id": 3,
+        "eslabon": "cambio",
+        "tipo": "origina",
+        "origen": {
+          "tipo": "necesidad",
+          "id": 2
+        },
+        "destino": {
+          "tipo": "cambio",
+          "id": 4
+        },
+        "motivo_sospecha": "El cambio #4 cambi\u00f3 de contenido el 2026-07-21 05:57:05 UTC. Este enlace se valid\u00f3 contra otro contenido y hay que revisarlo."
+      },
+      {
+        "id": 4,
+        "eslabon": "cambio",
+        "tipo": "especifica",
+        "origen": {
+          "tipo": "cambio",
+          "id": 4
+        },
+        "destino": {
+          "tipo": "requisito",
+          "id": 2
+        },
+        "motivo_sospecha": "El cambio #4 cambi\u00f3 de contenido el 2026-07-21 05:57:05 UTC. Este enlace se valid\u00f3 contra otro contenido y hay que revisarlo."
+      }
+    ]
+  }
+}

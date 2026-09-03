@@ -1,0 +1,16 @@
+
+   PASS  Tests\Feature\DominioContextoTest
+  ✓ it dominio_contexto devuelve vigentes con invariantes, superadas c… 73.67s  
+  ✓ it dominio_contexto con un dominio inexistente responde con los slu… 0.08s  
+  ✓ it decision_leer trae la decisión completa con su historia de super… 0.10s  
+  ✓ it decision_leer con un código que no existe es un error             0.13s  
+  ✓ it invariantes_de encuentra por prefijo de ruta y por símbolo exact… 0.09s  
+  ✓ it invariantes_de sin resultados devuelve lista vacía con pista, nu… 0.12s  
+  ✓ it verificar_contradicciones sin pendientes responde ok con los inv… 0.09s  
+  ✓ it verificar_contradicciones lista las contradicciones pendientes d… 0.15s  
+  ✓ it verificar_contradicciones sobre un cambio inexistente es un erro… 0.08s  
+
+  Tests:    9 passed (22 assertions)
+  Duration: 74.63s
+
+exit=0

@@ -1,0 +1,18 @@
+
+   PASS  Tests\Feature\ContradiccionGateTest
+  ✓ it 422 nombrando la contradicción al intentar autorizar un cambio…  82.11s  
+  ✓ it 422 nombrando la contradicción al intentar avanzar a en_analisis… 0.22s  
+  ✓ it pasar a rechazado está permitido pese a la contradicción pendien… 0.21s  
+  ✓ it la congelación alcanza a cualquier cambio del mismo dominio, no…  2.00s  
+  ✓ it la congelación no cruza proyectos: una contradicción pendiente e… 0.40s  
+  ✓ it resuelta la contradicción, el mismo avance que antes se rechazab… 0.18s  
+  ✓ it un cambio sin dominio transita normal aunque exista una contradi… 0.24s  
+  ✓ it un cambio sin dominio sí se congela por una contradicción abiert… 0.34s  
+  ✓ it citar un invariante de una decisión superada rechaza al COMMIT,…  0.19s  
+  ✓ it citar un invariante de una decisión vigente pasa sin rechazo      0.25s  
+  ✓ it citar un invariante que todavía no cuelga de ninguna decisión pa… 0.20s  
+
+  Tests:    11 passed (21 assertions)
+  Duration: 86.55s
+
+exit=0

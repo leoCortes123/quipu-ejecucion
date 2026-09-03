@@ -1,0 +1,72 @@
+[
+  {
+    "tarea": "F0/T01",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  },
+  {
+    "tarea": "F0/T02",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  },
+  {
+    "tarea": "F0/T03",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  },
+  {
+    "tarea": "F0/T04",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  },
+  {
+    "tarea": "F0/T05",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  },
+  {
+    "tarea": "F1/T01",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  },
+  {
+    "tarea": "F1/T02",
+    "fecha": "2026-08-31T00:42:45-05:00",
+    "mecanico": "PASA",
+    "juez": "aprobada",
+    "motivo_rechazo": null,
+    "clasificacion": "coincide",
+    "fuente": "replay-historico",
+    "nota": "replay Fase 1: veredicto mecánico reproducido contra progress.json"
+  }
+]

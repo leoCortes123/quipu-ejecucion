@@ -1,0 +1,684 @@
+
+  ............................................................................
+  ............................................................................
+  ............................................................................
+  ............................................................................
+  ......................................
+
+  ──────────────────────────────────────────────────────────────────── Laravel  
+    PASS   ......................................................... 342 files  
+
+Note: Using configuration file /code/api/phpstan.neon.
+   0/275 [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]   0%[1G[2K  20/275 [▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░]   7%[1G[2K  40/275 [▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░]  14%[1G[2K 100/275 [▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░░░░░]  36%[1G[2K 140/275 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░]  50%[1G[2K 160/275 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░]  58%[1G[2K 198/275 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░]  72%[1G[2K 236/275 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░]  85%[1G[2K 255/275 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░]  92%[1G[2K 275/275 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓] 100%
+
+
+ [OK] No errors                                                                 
+
+
+   PASS  Tests\Feature\ActivityFeedTest
+  ✓ it fusiona transiciones, comentarios y evidencia en una sola línea… 70.98s  
+  ✓ it cada entrada dice quién la produjo, y la cascada dice que no fue… 0.11s  
+  ✓ it el feed del proyecto no se mezcla con el de al lado               0.16s  
+  ✓ it pagina: pide una página y dice si hay más                         0.09s  
+  ✓ it un bloque sin historia devuelve una lista vacía, no un 404        0.17s  
+
+   PASS  Tests\Feature\AdopcionTest
+  ✓ it crea una línea base con un item por artefacto y su huella         0.10s  
+  ✓ it congela el contenido de entonces, no un puntero al de ahora       0.16s  
+  ✓ it rechaza borrar un item de una foto sellada                        0.09s  
+  ✓ it rechaza modificar la huella de un item de una foto sellada        0.16s  
+  ✓ it rechaza añadir un item a una foto sellada                         0.09s  
+  ✓ it rechaza des-sellar la cabecera sellada                            0.15s  
+  ✓ it rechaza borrar la cabecera sellada                                0.09s  
+  ✓ it deja corregir libremente una línea base todavía en construcción   0.20s  
+  ✓ it marca es_heredado todo feature preexistente y sabe contarlos      0.15s  
+  ✓ it registra la fecha de frontera y el humano que la declaró          0.09s  
+  ✓ it no deja a un agente sellar la frontera                            0.19s  
+  ✓ it no duplica items al inventariar dos veces sobre el mismo borrado… 0.09s  
+  ✓ it se niega a crear una segunda frontera sin aviso explícito         0.15s  
+  ✓ it la frontera es permanente: no se re-declara ni forzándolo         0.09s  
+  ✓ it una sola frontera sellada por proyecto, sostenido por la BD       0.14s  
+  ✓ it sella 5.000 artefactos sin agotar memoria ni disparar propagació… 1.22s  
+  ✓ it sin fotografía no se importa, y el 422 enumera lo que falta medi… 0.09s  
+  ✓ it con fotografía pero sin decisión, la puerta manda registrarla     0.22s  
+  ✓ it la decisión reiniciar cierra esta puerta y redirige a la plantil… 0.14s  
+  ✓ it un proyecto nacido de plantilla no se adopta                      0.08s  
+  ✓ it el camino feliz carga todo: pendiente en backlog, sin deps en re… 0.18s  
+  ✓ it importar dos veces el mismo payload no duplica nada               0.15s  
+  ✓ it un tipo de entregable inventado se rechaza enumerando los que ha… 0.09s  
+  ✓ it un bloque sin criterios no es ejecutable y no entra               0.17s  
+  ✓ it un endpoint de la línea base sin summary se rechaza con 422, no…  0.09s  
+  ✓ it una pantalla de la línea base sin route se rechaza con 422, no c… 0.16s  
+  ✓ it un método HTTP inventado se rechaza enumerando los que hay        0.09s  
+  ✓ it una dependencia que el payload no define se rechaza               0.16s  
+  ✓ it un ciclo de dependencias lo rechaza el trigger y no queda nada a… 0.11s  
+  ✓ it el POST /adopt atraviesa el mismo motor: lo que MCP rechaza, HTT… 0.18s  
+  ✓ it el contrato de importación se lee, no se adivina                  0.08s  
+
+   PASS  Tests\Feature\AgentTokenTest
+  ✓ it no devuelve el token en claro en ningún campo de GET /api/member… 0.17s  
+  ✓ it ya no guarda la key en la tabla member                            0.08s  
+  ✓ it no deja rastro del valor en claro en ninguna columna de member    0.13s  
+  ✓ it devuelve la key al emitirla y sólo guarda su hash                 0.07s  
+  ✓ it devuelve la key una sola vez: al crear el agente y al regenerarl… 0.16s  
+  ✓ it regenerar la key mata la anterior                                 0.07s  
+  ✓ it rechaza con 403 por capacidad ausente cuando el agente intenta a… 0.16s  
+  ✓ it emite el token del agente sin las capacidades de firmar ni aprob… 0.08s  
+  ✓ it deja aprobar al humano, cuya credencial sí lleva la capacidad     0.21s  
+  ✓ it rechaza por la credencial aunque el rol tenga el permiso de sobr… 0.17s  
+  ✓ it responde 401 en /mcp con un token revocado                        0.07s  
+  ✓ it deja entrar por /mcp con la key viva                              0.16s  
+  ✓ it no autentica por STDIO con una key revocada                       0.08s  
+  ✓ it no deja ningún test leyendo member.agent_token                    0.15s  
+  ✓ it rechaza sin token                                                 0.07s  
+  ✓ it devuelve 401, no 500, aunque el cliente no pida JSON              0.15s  
+  ✓ it deja pasar el health check sin token                              0.08s  
+  ✓ it autentica a un agente con su token y lo identifica                0.15s  
+  ✓ it autentica a un humano por el mismo camino que a un agente         0.08s  
+  ✓ it rechaza un token inventado                                        0.13s  
+  ✓ it revoca el token al hacer logout                                   0.08s  
+  ✓ it emite un token con el comando quipu:token                         0.23s  
+  ✓ it no emite token a un member inexistente                            0.12s  
+  ✓ it no emite token a un member inactivo                               0.08s  
+  ✓ it /auth/me trae los roles y los permisos de quien entró             0.14s  
+  ✓ it la ruta pública del login no publica la matriz de permisos        0.08s  
+
+   PASS  Tests\Feature\AnalysisIntakeTest
+  ✓ it el catálogo dice qué preguntar y qué se admite                    1.38s  
+  ✓ it el trigger rechaza un valor inventado y enumera los válidos       0.29s  
+  ✓ it un valor válido se escribe con quién lo estableció                0.32s  
+  ✓ it una clave que el catálogo no tiene se rechaza enumerando las que… 0.16s  
+  ✓ it establecer dos veces la misma clave actualiza, no duplica         0.09s  
+  ✓ it la categoría fuera del catálogo sigue aceptando cualquier JSON    0.14s  
+  ✓ it el análisis a medias dice lo que falta, con su etiqueta y sus op… 0.08s  
+  ✓ it la forma no se reclama, pero no se esconde: va en optional y dic… 0.14s  
+  ✓ it el agente que responde todo lo reclamado llega a una recomendaci… 0.11s  
+  ✓ it un typo en la categoría no se escribe en silencio                 0.16s  
+  ✓ it se pide el artefacto que la respuesta implica, con instrucciones  0.08s  
+  ✓ it sin esa respuesta no se pide ese artefacto                        0.14s  
+  ✓ it la recomendación es una consecuencia declarada, no una opinión    0.09s  
+  ✓ it la consecuencia no puede colgar del aire                          0.22s  
+  ✓ it el seeder ya enlaza lo que las plantillas de hoy cubren           0.14s  
+  ✓ it sin hechos establecidos no hay nada que recomendar, y el cero di… 0.08s  
+  ✓ it respondido lo que elige plantilla, el cero deja de excusarse      0.14s  
+  ✓ it el análisis de un proyecto no se mezcla con el de otro            0.08s  
+
+   PASS  Tests\Feature\BlockArtifactsTest
+  ✓ it lista lo que el bloque construyó, agrupado por tipo de artefacto  0.18s  
+  ✓ it solo devuelve lo que creó ese bloque, no lo de al lado            0.09s  
+  ✓ it un bloque que no construyó nada devuelve tres listas vacías, no…  0.15s  
+  ✓ it el motivo de un rechazo se puede leer por HTTP                    0.12s  
+  ✓ it se puede comentar un bloque                                       0.13s  
+  ✓ it la lista de tasks dice cuánta evidencia lleva cada una y quién l… 0.09s  
+  ✓ it una task sin evidencia lo dice con un cero, no omitiendo el camp… 0.14s  
+
+   PASS  Tests\Feature\BlockTransitionTest
+  ✓ it el ciclo de vida entero deja una fila por movimiento, en orden    0.13s  
+  ✓ it la fila lleva a quien lo movió de verdad, agente o humano         0.18s  
+  ✓ it devolver un bloque guarda el motivo en el historial, no solo en…  0.11s  
+  ✓ it bloquear guarda el impedimento como motivo                        0.14s  
+  ✓ it la cascada registra los bloques que empuja a ready, sin dueño     0.10s  
+  ✓ it una transición inválida no deja rastro                            0.24s  
+
+   PASS  Tests\Feature\BootstrapTest
+  ✓ it sustituye las respuestas en los títulos y alcances                0.17s  
+  ✓ it genera los features y bloques del template                        0.12s  
+  ✓ it cablea las dependencias declaradas por código, incluso entre fea… 0.23s  
+  ✓ it exige responder las preguntas obligatorias                        0.14s  
+  ✓ it la combinación comprobada es una regla, no una sugerencia         0.08s  
+  ✓ it la pregunta de texto libre sigue aceptando cualquier cosa         0.19s  
+  ✓ it el proyecto recuerda con qué plantilla nació y qué se respondió   0.12s  
+  ✓ it el bootstrap fallido no deja respuestas escritas                  0.14s  
+  ✓ it no bootstrapea dos veces el mismo proyecto                        0.12s  
+  ✓ it rechaza un template que depende de un bloque inexistente, sin de… 0.16s  
+  ✓ it expone las preguntas del template por HTTP                        0.07s  
+  ✓ it bootstrapea un proyecto por HTTP                                  0.22s  
+  ✓ it devuelve 422 si faltan respuestas                                 0.14s  
+
+   PASS  Tests\Feature\CadenaMcpTest
+  ✓ it el catálogo de tools no expone firma, autorización ni aceptación  0.08s  
+  ✓ it un agente registra una necesidad y consta él y su persona respon… 0.17s  
+  ✓ it un requisito derivado sin justificación se rechaza igual por RES… 0.10s  
+  ✓ it una falta de permiso se rechaza igual por REST y por MCP, nombra… 0.18s  
+  ✓ it ningún rechazo de la cadena filtra rutas, SQL ni nombres de cons… 0.09s  
+  ✓ it lista las necesidades de un proyecto por MCP                      0.19s  
+  ✓ it enlaza cobertura por MCP: un criterio de bloque satisface uno de… 0.12s  
+  ✓ it recorre la cadena por MCP: necesidad, cambio, requisitos, expedi… 0.20s  
+
+   PASS  Tests\Feature\CadenaRestTest
+  ✓ it abre un cambio, le declara requisitos y lee su expediente         0.25s  
+  ✓ it un estándar de riesgo alto se rechaza con 422 accionable, no con… 0.14s  
+  ✓ it un requisito derivado sin justificación se rechaza con 422 accio… 0.09s  
+  ✓ it declarar requisitos sin el permiso da 403 que nombra el permiso   0.16s  
+  ✓ it lista las sospechas de un cambio tocado y las revalida            0.13s  
+  ✓ it la bandeja nombra los dos extremos, no los deja en tipo e id      0.19s  
+  ✓ it un extremo que ya no existe deja la bandeja incompleta, no caída  0.11s  
+  ✓ it revalidar sin el permiso da 403 que nombra el permiso             0.15s  
+  ✓ it lista los cambios del proyecto y filtra por estado                0.12s  
+  ✓ it el expediente dice a dónde puede ir el cambio desde donde está    0.18s  
+  ✓ it una transición que el grafo no permite es 422, no 500             0.09s  
+  ✓ it se llega al expediente por el código igual que por el id          0.20s  
+  ✓ it reescribir un requisito ensucia lo que se enlazó contra el texto… 0.11s  
+  ✓ it reescribir un requisito sin el permiso da 403 que nombra el perm… 0.30s  
+
+   PASS  Tests\Feature\CambioGateTest
+  ✓ it no cierra con un criterio sin cubrir, y dice exactamente cuál     0.36s  
+  ✓ it no da por especificado un cambio sin requisitos, ni uno cuyos re… 0.39s  
+  ✓ it no cierra con un enlace sospechoso, aunque todo lo demás esté cu… 0.58s  
+  ✓ it bloquea el cierre cuando el contenido cambia y las firmas quedan… 0.23s  
+  ✓ it rechaza el cierre sin firma de aceptación aunque el UPDATE venga… 0.24s  
+  ✓ it cierra cuando las seis puertas están abiertas                     0.22s  
+  ✓ it devuelve las seis comprobaciones con su estado y su cuenta, no u… 0.20s  
+  ✓ it no cierra con un bloque a medio construir, y lo nombra            0.20s  
+  ✓ it sirve el informe por REST y devuelve 422 con el detalle al inten… 0.43s  
+  ✓ it cierra por REST cuando el gate está verde, y niega a quien no pu… 0.25s  
+
+   PASS  Tests\Feature\CambioTest
+  ✓ it Postgres rechaza un feature sin cambio y sin marca de heredado    0.15s  
+  ✓ it Postgres rechaza un feature que dice ser heredado y a la vez cue… 0.08s  
+  ✓ it acepta un feature que cuelga de su cambio                         0.14s  
+  ✓ it un feature sin causa sólo entra declarándose heredado, y nunca f… 0.08s  
+  ✓ it la deuda documental es un número que se puede consultar y que ba… 0.14s  
+  ✓ it rechaza saltarse la autorización, y el error dice por dónde se p… 0.08s  
+  ✓ it el mensaje dice a dónde SÍ se puede ir desde donde está           0.16s  
+  ✓ it deja recorrer el ciclo entero cuando se hace en orden             0.15s  
+  ✓ it el grafo de transiciones es dato: añadir una es un INSERT         0.18s  
+  ✓ it dice qué firmas faltan y de qué rol, no un booleano               0.08s  
+  ✓ it según se van poniendo firmas, el informe las mueve de pendientes… 1.22s  
+  ✓ it una firma sin el rol que pide la política no autoriza nada        1.62s  
+  ✓ it Postgres impide autorizar sin las firmas, aunque se llame direct… 0.39s  
+  ✓ it un cambio estándar no exige ninguna firma: es de catálogo         0.56s  
+  ✓ it la política es dato: quitar una fila cambia lo que hace falta     0.17s  
+  ✓ it la transición registra el canal y quién la hizo                   0.09s  
+  ✓ it cuando la mueve un agente, el responsable es su persona           0.24s  
+  ✓ it cuando la mueve una persona, ella misma es la responsable         0.14s  
+  ✓ it una transición rechazada no deja rastro a medias                  0.08s  
+  ✓ it Postgres impide cerrar una emergencia sin revisión posterior      0.18s  
+  ✓ it cierra la emergencia cuando consta quién la revisó y cuándo       0.14s  
+  ✓ it Postgres rechaza un cambio estándar que no sea de riesgo bajo     0.12s  
+  ✓ it el cambio es artefacto controlado: cambiar su riesgo mueve la hu… 0.08s  
+  ✓ it el contexto es prosa: cambiarlo no mueve la huella                0.08s  
+
+   PASS  Tests\Feature\CodeAndKnowledgeTest
+  ✓ it dice qué pantallas rompe un cambio en un endpoint                 0.13s  
+  ✓ it traza el endpoint desde el diseño hasta el código y las pantalla… 0.09s  
+  ✓ it registra los artefactos del bloque al completar la task           1.17s  
+  ✓ it el catálogo de componentes distingue lo propio de lo de shadcn    0.11s  
+  ✓ it busca en la knowledge base por texto en español                   0.08s  
+  ✓ it guarda una lección con su causa raíz y su prevención              0.15s  
+  ✓ it el indexer registra las clases y componentes que hay en code/     0.41s  
+
+   PASS  Tests\Feature\CodeIndexTest
+  ✓ it dos proyectos con el mismo FQN no colisionan y las rutas van sin… 0.14s  
+  ✓ it get_existing_components con project_slug no ve los componentes d… 0.09s  
+  ✓ it reindexar el mismo proyecto dos veces no duplica nada             0.15s  
+  ✓ it un slug que no existe o un repo_path inservible cortan con error… 0.09s  
+
+   PASS  Tests\Feature\ContractLockTest
+  ✓ it un bloque web no arranca mientras el contrato no esté congelado   0.04s  
+  ✓ it un contrato deprecado frena al bloque web aunque su dependencia…  0.06s  
+  ✓ it la cascada congela el contrato y desbloquea el bloque web         0.29s  
+  ✓ it solo un bloque de API puede producir un contrato                  0.28s  
+  ✓ it el contrato de un bloque ya done nace congelado                   0.06s  
+  ✓ it registra los bloques que consumen un contrato                     0.12s  
+  ✓ it lista los contratos filtrando por estado                          0.04s  
+
+   PASS  Tests\Feature\ContradiccionGateTest
+  ✓ it 422 nombrando la contradicción al intentar autorizar un cambio c… 0.10s  
+  ✓ it 422 nombrando la contradicción al intentar avanzar a en_analisis… 0.15s  
+  ✓ it pasar a rechazado está permitido pese a la contradicción pendien… 0.09s  
+  ✓ it la congelación alcanza a cualquier cambio del mismo dominio, no…  0.18s  
+  ✓ it la congelación no cruza proyectos: una contradicción pendiente e… 0.09s  
+  ✓ it resuelta la contradicción, el mismo avance que antes se rechazab… 0.30s  
+  ✓ it un cambio sin dominio transita normal aunque exista una contradi… 0.64s  
+  ✓ it un cambio sin dominio sí se congela por una contradicción abiert… 0.44s  
+  ✓ it citar un invariante de una decisión superada rechaza al COMMIT,…  0.33s  
+  ✓ it citar un invariante de una decisión vigente pasa sin rechazo      0.14s  
+  ✓ it citar un invariante que todavía no cuelga de ninguna decisión pa… 0.09s  
+
+   PASS  Tests\Feature\DecisionChainTest
+  ✓ it una decisión nace propuesta: nadie la declara norma al crearla    0.13s  
+  ✓ it Postgres rechaza promover una decisión sin la firma que la autor… 0.15s  
+  ✓ it un agente no puede poner la firma que promueve: firmar es humano  0.16s  
+  ✓ it la firma de alguien sin el rol human_admin no promueve nada       0.08s  
+  ✓ it un humano con rol human_admin firma promuevo y la decisión queda… 0.21s  
+  ✓ it cambiar el contenido después de firmar invalida la promoción      0.36s  
+  ✓ it promover no mueve la huella: el estado no es contenido sustantiv… 0.56s  
+  ✓ it nacer vigente es imposible: el INSERT directo pasa por el mismo…  0.12s  
+  ✓ it una decisión vigente sin quién la promovió no existe              0.09s  
+  ✓ it Postgres rechaza dejar superada una decisión sin decisión suceso… 0.13s  
+  ✓ it con su sucesora y el motivo, la decisión sí queda superada        0.09s  
+  ✓ it nacer superada es imposible: el INSERT directo también exige suc… 0.13s  
+  ✓ it la decisión que reemplaza a otra no se puede borrar               0.09s  
+  ✓ it borrar la única arista de una superada la deja huérfana: rechaza… 0.13s  
+  ✓ it reapuntar la predecesora de la única arista de una superada tamb… 0.09s  
+  ✓ it reapuntar sólo la sucesora de una superada no la deja huérfana:…  0.14s  
+  ✓ it borrar una arista de una superada con otro sucesor vivo no la de… 0.10s  
+  ✓ it descartar no exige sucesora: lo descartado nunca llegó a ser nor… 0.14s  
+  ✓ it una arista de reemplazo sin motivo no entra                       0.09s  
+  ✓ it una decisión no se reemplaza a sí misma                           0.14s  
+  ✓ it rechaza el ciclo corto A → B → A nombrando el ciclo               0.09s  
+  ✓ it rechaza también la cadena larga A → B → C → A                     0.14s  
+  ✓ it reapuntar una arista ya escrita tampoco puede cerrar un ciclo     0.10s  
+  ✓ it una cadena de reemplazos sin ciclo sí se deja escribir            0.18s  
+  ✓ it Postgres rechaza un invariante confirmado sin evidencia           0.07s  
+  ✓ it tampoco cuela una evidencia vacía                                 0.24s  
+  ✓ it un invariante confirmado con su ancla ruta:símbolo entra          0.19s  
+  ✓ it lo que no está anclado no se prohíbe: se etiqueta inferido        0.08s  
+  ✓ it una contradicción nace pendiente                                  0.15s  
+  ✓ it Postgres rechaza resolver una contradicción sin decir quién y cu… 0.09s  
+  ✓ it resuelta con quien la resolvió y cuándo, la contradicción se cie… 0.19s  
+
+   PASS  Tests\Feature\DecisionMcpTest
+  ✓ it el catálogo de tools no expone promoción, aprobación, resolución… 0.10s  
+  ✓ it un agente propone una decisión que nace propuesta; sólo un human… 0.17s  
+  ✓ it proponer una sucesora sin motivo de reemplazo se rechaza; con mo… 0.09s  
+  ✓ it un agente con contradiccion.abrir abre la contradicción; sin el…  0.18s  
+  ✓ it un human_admin sin el permiso contradiccion.resolver recibe 403…  0.10s  
+  ✓ it Postgres rechaza que un agente resuelva una contradicción aunque… 0.17s  
+  ✓ it un agente que abre una contradicción entre un cambio y un invari… 0.10s  
+  ✓ it Postgres rechaza por trigger una contradicción insertada directo… 0.15s  
+  ✓ it una contradicción ya resuelta por un humano rechaza un UPDATE qu… 0.10s  
+
+   PASS  Tests\Feature\DesignLayerTest
+  ✓ it crea un endpoint con parámetros, body y respuestas                0.14s  
+  ✓ it rechaza un permiso que no existe en el catálogo                   0.08s  
+  ✓ it guarda los permisos de una pantalla contra el catálogo            0.14s  
+  ✓ it no admite dos endpoints con el mismo método y ruta                0.08s  
+  ✓ it devuelve la pantalla como árbol de componentes                    0.15s  
+  ✓ it no deja colgar un componente de una pantalla ajena                0.09s  
+  ✓ it registra estados, interacciones y fuente de datos de un componen… 0.28s  
+  ✓ it rechaza un tipo de componente que no está en el lookup            0.16s  
+  ✓ it borra el árbol entero al borrar la pantalla                       0.08s  
+
+   PASS  Tests\Feature\DominioContextoTest
+  ✓ it dominio_contexto devuelve vigentes con invariantes, superadas co… 0.17s  
+  ✓ it dominio_contexto con un dominio inexistente responde con los slu… 0.09s  
+  ✓ it decision_leer trae la decisión completa con su historia de super… 0.17s  
+  ✓ it decision_leer con un código que no existe es un error             0.07s  
+  ✓ it invariantes_de encuentra por prefijo de ruta y por símbolo exact… 0.16s  
+  ✓ it invariantes_de sin resultados devuelve lista vacía con pista, nu… 0.07s  
+  ✓ it verificar_contradicciones sin pendientes responde ok con los inv… 0.17s  
+  ✓ it verificar_contradicciones lista las contradicciones pendientes d… 0.10s  
+  ✓ it verificar_contradicciones sobre un cambio inexistente es un erro… 0.15s  
+
+   PASS  Tests\Feature\EndToEndTest
+  ✓ it de un proyecto vacío a un bloque cerrado: bootstrap, MCP, eviden… 0.19s  
+  ✓ it el humano rechaza y el bloque vuelve al agente con el motivo      2.16s  
+
+   PASS  Tests\Feature\EntryPathTest
+  ✓ it sin fotografía no hay veredicto, y dice qué medir                 0.15s  
+  ✓ it un código sólido recomienda continuar, con el porqué en la fila   0.09s  
+  ✓ it un código irrecuperable recomienda reiniciar                      0.20s  
+  ✓ it el empate no se disfraza de veredicto: se enseñan los dos lados   0.16s  
+  ✓ it el veredicto es de la tabla: quitar la fila lo cambia             0.09s  
+  ✓ it la tool presenta el veredicto y guía sin decidir por nadie        0.16s  
+  ✓ it con la decisión registrada, la tool apunta al siguiente paso      0.09s  
+  ✓ it con fotografía incompleta, la tool manda medir antes de opinar    0.15s  
+
+   PASS  Tests\Feature\FeatureBlockCrudTest
+  ✓ it crea un feature en un proyecto declarándolo heredado              0.03s  
+  ✓ it no crea un feature que no dice de dónde viene                     0.03s  
+  ✓ it rechaza una complejidad que no está en el lookup                  0.12s  
+  ✓ it añade reglas de negocio a un feature                              0.04s  
+  ✓ it no repite el código de regla dentro del mismo feature             0.03s  
+  ✓ it crea un bloque en backlog y expone sus transiciones legales       0.04s  
+  ✓ it guarda los criterios de aceptación como filas con forma, en orde… 0.10s  
+  ✓ it rechaza un criterio sin acción ni salida esperada                 0.03s  
+  ✓ it marca un criterio como cumplido, uno solo y con su fecha          0.04s  
+  ✓ it no deja dar por cumplido un criterio sin evidencia que lo pruebe  0.10s  
+  ✓ it no deja marcar un criterio de otro bloque                         0.03s  
+  ✓ it devuelve 422 al pedir una transición ilegal                       0.03s  
+  ✓ it filtra bloques por estado y por proyecto                          0.03s  
+  ✓ it registra una dependencia entre bloques                            0.04s  
+  ✓ it devuelve 422 si la dependencia cerraría un ciclo                  0.12s  
+
+   PASS  Tests\Feature\FeatureOrderTest
+  ✓ it coloca una feature después de la que la habilita                  0.04s  
+  ✓ it ignora las dependencias entre bloques de la misma feature         0.03s  
+  ✓ it desempata por id: sin dependencias, manda el orden en que se pla… 0.03s  
+  ✓ it tolera un ciclo entre dos features sin colgarse ni reventar       0.03s  
+  ✓ it expone el orden y las dependencias en el árbol del proyecto       0.12s  
+
+   PASS  Tests\Feature\FirmaTest
+  ✓ it rechaza a un agente que intenta firmar por el servicio            0.42s  
+  ✓ it rechaza a un agente que intenta firmar por REST, con 403          1.18s  
+  ✓ it Postgres rechaza la firma de un agente aunque se salte la aplica… 0.43s  
+  ✓ it no expone ninguna tool MCP para firmar                            0.41s  
+  ✓ it deja firmar a un humano con el permiso que exige el significado   0.51s  
+  ✓ it no deja firmar autorizo a quien no tiene el permiso, y nombra cu… 0.59s  
+  ✓ it la firma sobrevive al cambio de contenido, pero deja de estar vi… 0.48s  
+  ✓ it un cambio no sustantivo no invalida la firma                      0.63s  
+  ✓ it admite volver a firmar cuando el contenido ya es otro             1.03s  
+  ✓ it rechaza la misma firma dos veces sobre el mismo contenido         0.50s  
+  ✓ it al consultarla constan quién, cuándo, en calidad de qué y sobre…  0.44s  
+  ✓ it la huella la sella la base, no quien firma                        0.43s  
+  ✓ it quien redactó no puede autorizar lo mismo                         0.46s  
+  ✓ it corta la incompatibilidad en los dos órdenes                      0.46s  
+  ✓ it deja que otra persona ponga la firma que al primero le está veda… 1.12s  
+  ✓ it no estorba entre significados compatibles                         0.44s  
+  ✓ it no confunde entidades distintas                                   0.44s  
+  ✓ it Postgres rechaza borrar una firma                                 0.50s  
+  ✓ it Postgres rechaza modificar una firma                              0.56s  
+  ✓ it no existe ninguna ruta para borrar firmas                         0.48s  
+
+   PASS  Tests\Feature\FirstLoadDiagnosticTest
+  ✓ it las dimensiones del diagnóstico están en el catálogo, con sus va… 0.12s  
+  ✓ it una medida del diagnóstico se escribe como fila, con firma        0.08s  
+  ✓ it el trigger rechaza una medida inventada enumerando las que hay    0.15s  
+  ✓ it el detalle es texto libre dirigido al humano, y se admite         0.08s  
+  ✓ it la decisión de adopción solo admite continuar o reiniciar         0.17s  
+  ✓ it el diagnóstico no ensucia el missing del camino de plantilla      0.08s  
+  ✓ it el diagnóstico se reanuda entre sesiones, como el resto del anál… 0.17s  
+
+   PASS  Tests\Feature\HealthTest
+  ✓ it responde 200 con DB y Redis arriba, sin auth                      0.04s  
+  ✓ it avisa si el Protocol Engine no está en la base                    0.02s  
+  ✓ it cuenta el trabajo pendiente y el que espera un humano             0.23s  
+
+   PASS  Tests\Feature\HuellaRequisitoTest
+  ✓ it cambia la huella del requisito cuando cambia su enunciado         0.08s  
+  ✓ it también la cambia el tipo y la justificación, que son sustantivo… 0.32s  
+  ✓ it no cambia la huella cuando sólo cambia el sort_order              0.58s  
+  ✓ it tampoco la cambia aprobar el requisito: el estado no es contenid… 0.15s  
+  ✓ it el criterio de requisito se precinta por su contenido, no por su… 0.08s  
+  ✓ it da la misma huella a dos requisitos con idéntico contenido susta… 0.16s  
+  ✓ it no las iguala si el contenido difiere en un solo campo sustantiv… 0.08s  
+  ✓ it precinta también el criterio de bloque heredado, sin el cual no…  0.16s  
+
+   PASS  Tests\Feature\HuellaTest
+  ✓ it cambia la huella cuando cambia una columna sustantiva             0.34s  
+  ✓ it no cambia la huella cuando cambia una columna que no es sustanti… 0.31s  
+  ✓ it cambia la huella al cambiar cualquiera de las columnas sustantiv… 0.36s  
+  ✓ it da la misma huella a dos filas con idéntico contenido sustantivo  0.30s  
+  ✓ it distingue mover un texto de un campo a otro                       0.30s  
+  ✓ it no depende del orden en que se declaren las columnas en el catál… 0.30s  
+  ✓ it no ejecuta SQL arbitrario inyectado en el nombre de una columna   0.60s  
+  ✓ it no ejecuta SQL arbitrario inyectado en el nombre de la tabla      0.88s  
+  ✓ it dice qué columna falta y en qué tipo cuando el catálogo miente    0.42s  
+  ✓ it dice qué tabla no existe cuando el catálogo apunta a la nada      0.32s  
+  ✓ it dice que el tipo no está declarado cuando no hay fila en el catá… 0.33s  
+  ✓ it exige que un tipo declare al menos una columna sustantiva         0.34s  
+  ✓ it recalcula la huella aunque quien escribe intente fijarla          0.34s  
+  ✓ it coincide con lo que calcula calcular_huella() desde la tabla      1.16s  
+
+   PASS  Tests\Feature\InterviewTest
+  ✓ it la entrevista empieza por el principio, no por donde caiga        0.22s  
+  ✓ it sirve una sola pregunta, con su aclaración y sus opciones tal cu… 0.09s  
+  ✓ it no le pregunta la plataforma a un proyecto que es sólo documenta… 0.21s  
+  ✓ it con código sí pregunta plataforma y dónde está guardado           0.17s  
+  ✓ it la herramienta que no está en la lista deja de ser un callejón s… 0.09s  
+  ✓ it una pregunta de texto libre se distingue de una de opciones       0.17s  
+  ✓ it sin haber elegido «otra» no se pregunta el nombre                 0.08s  
+  ✓ it el diagnóstico no se le pregunta nunca a la persona               0.23s  
+  ✓ it la entrevista termina y dice qué toca después                     0.42s  
+  ✓ it «no lo sé» es una respuesta legítima y no mueve ningún veredicto  0.15s  
+  ✓ it la tool sirve la pregunta por MCP                                 0.08s  
+  ✓ it una condición no puede colgar de una respuesta que nadie puede d… 0.14s  
+  ✓ it un campo no puede condicionarse a sí mismo                        0.07s  
+
+   PASS  Tests\Feature\KnowledgeProvenanceTest
+  ✓ it la lección sabe de qué proyecto es                                0.13s  
+  ✓ it sin project_slug la lección queda sin dueño, pero no falla        0.08s  
+  ✓ it nombrar un proyecto que no existe dice cuáles hay                 0.13s  
+  ✓ it una categoría inventada se rechaza enumerando las que hay, no co… 0.07s  
+  ✓ it query_knowledge cruza proyectos y dice de dónde sale cada respue… 0.15s  
+  ✓ it con project_slug la búsqueda se acota a ese proyecto              0.08s  
+  ✓ it el título repetido en el mismo proyecto es un 422, no un 500      0.13s  
+  ✓ it el mismo título en proyectos distintos no colisiona               0.08s  
+  ✓ it por REST la lección también sabe de quién es, y se puede acotar   0.16s  
+  ✓ it por REST el duplicado también es un 422                           0.08s  
+
+   PASS  Tests\Feature\McpToolsTest
+  ✓ it no expone ninguna tool para aprobar bloques                       0.15s  
+  ✓ it get_ready_blocks solo devuelve lo que pasó los gates              0.09s  
+  ✓ it claim_block devuelve el payload con el que se puede trabajar      0.16s  
+  ✓ it claim_block falla si el bloque no está listo                      0.08s  
+  ✓ it el ciclo entero por MCP se detiene en verifying                   0.27s  
+  ✓ it el gate le dice al agente qué le falta, en vez de un no a secas   0.17s  
+  ✓ it el agente ve el contrato congelado que debe respetar              0.08s  
+  ✓ it el agente consulta el diseño de un feature de una sola llamada    0.15s  
+  ✓ it el agente busca en la knowledge base antes de repetir un error    0.18s  
+  ✓ it validate_design señala las pantallas sin fuente de datos          0.15s  
+
+   PASS  Tests\Feature\NecesidadTest
+  ✓ it rechaza un incidente sin anclaje, y el error dice qué hay que se… 0.44s  
+  ✓ it acepta un incidente que sí señala qué falla                       0.47s  
+  ✓ it exige anclaje también a una mejora                                0.75s  
+  ✓ it no deja la necesidad a medias cuando el anclaje falta             0.96s  
+  ✓ it acepta una necesidad nueva sin ningún anclaje                     0.59s  
+  ✓ it acepta una normativa sin anclaje                                  0.50s  
+  ✓ it la naturaleza decide el anclaje como dato, no como código         0.49s  
+  ✓ it descarta con motivo y deja constancia de quién lo decidió         0.49s  
+  ✓ it Postgres rechaza descartar sin motivo                             0.73s  
+  ✓ it Postgres rechaza descartar sin decir quién lo decidió             0.97s  
+  ✓ it marca duplicada dejando el enlace que dice de cuál                0.52s  
+  ✓ it Postgres rechaza una duplicada que no apunta a ninguna otra       0.57s  
+  ✓ it constan las dos personas cuando un analista registra en nombre d… 0.46s  
+  ✓ it las dos personas salen en la respuesta REST                       0.48s  
+  ✓ it cuando registra un agente, consta el agente y la persona respons… 0.52s  
+  ✓ it la respuesta REST enseña al agente y a su responsable             2.39s  
+  ✓ it cuando registra una persona, ella misma es la responsable         0.49s  
+  ✓ it cambiar el relato ensucia los enlaces que citan la necesidad      2.46s  
+  ✓ it reordenar no ensucia: el relato es sustantivo, la fecha de triaj… 0.48s  
+  ✓ it no deja registrar a quien no tiene el permiso                     0.49s  
+  ✓ it el código va por proyecto y en orden                              0.50s  
+
+   PASS  Tests\Feature\ProjectCrudTest
+  ✓ it lista los proyectos ordenados por nombre                          0.10s  
+  ✓ it crea un proyecto                                                  0.03s  
+  ✓ it rechaza un slug duplicado                                         0.02s  
+  ✓ it rechaza un slug con formato inválido                              0.02s  
+  ✓ it muestra un proyecto                                               0.03s  
+  ✓ it devuelve 404 si el proyecto no existe                             0.03s  
+  ✓ it actualiza un proyecto sin chocar con su propio slug               0.03s  
+  ✓ it borra un proyecto                                                 0.10s  
+
+   PASS  Tests\Feature\ProjectSettingTest
+  ✓ it guarda un setting con valor JSON arbitrario                       0.03s  
+  ✓ it actualiza el valor en vez de duplicar la clave                    0.03s  
+  ✓ it lista los settings y permite filtrar por categoría                0.03s  
+  ✓ it borra un setting                                                  0.03s  
+  ✓ it exige category, key y value                                       0.09s  
+
+   PASS  Tests\Feature\ProjectStatsTest
+  ✓ it cuenta los bloques por estado, con los seis estados siempre pres… 0.04s  
+  ✓ it no mezcla proyectos                                               0.05s  
+  ✓ it cuenta los criterios cumplidos sobre el total                     0.05s  
+  ✓ it cuenta los bloques parados esperando un contrato                  0.11s  
+  ✓ it un proyecto vacío devuelve ceros, no un 404                       0.03s  
+  ✓ it no hace N+1: las queries no crecen con el número de features      0.04s  
+  ✓ it el índice de bloques se puede acotar por proyecto                 0.04s  
+
+   PASS  Tests\Feature\ProjectTemplateCrudTest
+  ✓ it crea un template con sus design_rules                             0.08s  
+  ✓ it exige design_rules                                                0.02s  
+  ✓ it rechaza un nombre duplicado                                       0.02s  
+  ✓ it lista los templates y filtra por activos                          0.03s  
+  ✓ it actualiza las design_rules de un template                         0.03s  
+  ✓ it borra un template                                                 0.03s  
+
+   PASS  Tests\Feature\ProjectTreeTest
+  ✓ it devuelve la jerarquía completa del proyecto en una respuesta      0.04s  
+  ✓ it ordena los bloques por sort_order                                 0.10s  
+  ✓ it un proyecto sin features devuelve una lista vacía, no un 404      0.03s  
+  ✓ it no hace N+1: las queries no crecen con el número de features      0.05s  
+
+   PASS  Tests\Feature\ProtocolEngineTest
+  ✓ it no deja saltarse pasos de la máquina de estados                   0.03s  
+  ✓ it no deja pasar a ready con dependencias sin terminar               0.08s  
+  ✓ it deja pasar a ready cuando todas las dependencias están done       0.06s  
+  ✓ it solo un human_admin cierra un bloque                              0.04s  
+  ✓ it no cierra un bloque cuyo trabajo no está probado, ni siendo admi… 0.04s  
+  ✓ it deja registrado quién aprobó el bloque y cuándo                   0.14s  
+  ✓ it la BD impide un done sin verificador, aunque se salte la aplicac… 0.03s  
+  ✓ it rechaza un ciclo de dependencias al insertarlo                    0.03s  
+  ✓ it rechaza un ciclo indirecto de tres bloques                        0.10s  
+  ✓ it rechaza que un bloque dependa de sí mismo                         0.03s  
+  ✓ it marca el feature como shipped cuando cae su último bloque         0.05s  
+  ✓ it no marca el feature como shipped si aún queda algún bloque        0.05s  
+
+   PASS  Tests\Feature\RequisitoCoberturaTest
+  ✓ it no tiene columna is_met: el cumplimiento se calcula, no se guard… 0.21s  
+  ✓ it da por cumplido el criterio cuando un criterio de bloque probado… 0.30s  
+  ✓ it no lo da por cumplido si el criterio de bloque aún no está marca… 0.63s  
+  ✓ it deja de darlo por cumplido al retirar la evidencia de abajo, sin… 0.19s  
+  ✓ it deja de darlo por cumplido cuando el enlace queda sospechoso      0.11s  
+  ✓ it rechaza un satisface cuyo criterio de bloque es de otro cambio    0.23s  
+  ✓ it lo rechaza Postgres, no la aplicación                             0.17s  
+  ✓ it rechaza un satisface desde un bloque heredado, que no cuelga de…  0.10s  
+  ✓ it rechaza un requisito derivado sin justificación                   0.16s  
+  ✓ it rechaza el derivado sin justificación también a pelo, y con la j… 0.08s  
+  ✓ it acepta el derivado cuando trae justificación                      0.16s  
+  ✓ it cuelga el requisito de su cambio en la misma transacción          0.09s  
+  ✓ it no da por cubierto un requisito sin criterios                     0.16s  
+  ✓ it exige requisito.create para redactar                              0.09s  
+  ✓ it enseña qué criterios de bloque lo respaldan y en qué estado está… 0.18s  
+
+   PASS  Tests\Feature\RetrofitTest
+  ✓ it rechaza cruzar una pieza heredada sin requisito que la justifiqu… 0.11s  
+  ✓ it deja cruzar una pieza heredada con un requisito enlazado          0.28s  
+  ✓ it rechaza cruzar una pieza que no consta en la línea base           0.19s  
+  ✓ it no deja cruzar a quien no puede redactar la demanda               0.10s  
+  ✓ it al cruzar una pieza, sus hermanas del mismo módulo siguen hereda… 0.17s  
+  ✓ it marca sospechoso el enlace de una pieza cruzada cuando cambia de… 0.11s  
+  ✓ it no ensucia nada mientras la pieza sigue siendo heredada y sin cr… 0.16s  
+  ✓ it rechaza un requisito derivado sin justificación, y por tanto no…  0.08s  
+  ✓ it devuelve un porcentaje cercano a cero y el número de piezas here… 0.17s  
+  ✓ it sube la cobertura en consecuencia al cruzar tres piezas, sin act… 0.12s  
+  ✓ it cruza una pieza y consulta la cobertura por REST                  0.18s  
+  ✓ it responde 422 por REST cuando la pieza no consta en la línea base  0.11s  
+
+   PASS  Tests\Feature\RolesDemandaTest
+  ✓ it no le da al analista el permiso de autorizar cambios              0.17s  
+  ✓ it responde 403 nombrando el permiso que falta cuando el analista f… 0.08s  
+  ✓ it nombra el permiso de autorizar cambios en el 403 que producirá s… 0.18s  
+  ✓ it responde 403 cuando negocio intenta reclamar un bloque técnico    0.08s  
+  ✓ it deja a negocio autorizar y aceptar, que es lo suyo                0.15s  
+  ✓ it deja al auditor leer sin poder modificar nada                     0.08s  
+  ✓ it no duplica filas de role_permission al repetir el seeder          0.19s  
+  ✓ it coincide fila a fila con la matriz documentada                    0.07s  
+  ✓ it registra los tres roles nuevos como filas de lookup_role          0.14s  
+  ✓ it registra los seis permisos nuevos como filas de lookup_permissio… 0.07s  
+
+   PASS  Tests\Feature\SchemaProjectMemberTest
+  ✓ it crea las tablas de proyecto, member y permisos                    0.28s  
+  ✓ it carga los dos tipos de member                                     0.02s  
+  ✓ it nombra las constraints según la convención del esquema            0.02s  
+  ✓ it rechaza un member_type que no está en el lookup                   0.02s  
+  ✓ it rechaza dos proyectos con el mismo slug                           0.02s  
+  ✓ it borra los settings en cascada al borrar el proyecto               0.03s  
+
+   PASS  Tests\Feature\SeederTest
+  ✓ it siembra los 7 roles y los 22 permisos                             0.28s  
+  ✓ it crea el admin inicial como human_admin                            0.30s  
+  ✓ it da a block.approve solo al human_admin                            0.31s  
+  ✓ it no deja a un builder aprobar bloques, pero sí reclamarlos         0.14s  
+  ✓ it es idempotente: sembrar dos veces no duplica nada                 0.10s  
+
+   PASS  Tests\Feature\SmokeTest
+  ✓ it arranca la aplicación y responde la raíz                          0.10s  
+
+   PASS  Tests\Feature\SospechaMasivaTest
+  ✓ it marca los mil enlaces en una sola sentencia y en menos de cinco…  1.19s  
+  ✓ it marca exactamente los afectados y deja el resto en paz            1.90s  
+  ✓ it no ensucia nada cuando el lote toca sólo campos accesorios        1.18s  
+
+   PASS  Tests\Feature\SospechaTest
+  ✓ it marca sospechoso el enlace cuando cambia el enunciado del requis… 0.84s  
+  ✓ it el motivo nombra qué extremo cambió y cuándo                      1.63s  
+  ✓ it ensucia también cuando el que cambia es el destino                0.84s  
+  ✓ it no repisa el motivo de un enlace que ya estaba sospechoso         0.83s  
+  ✓ it deja el enlace válido cuando cambia un campo no sustantivo        0.77s  
+  ✓ it deja el enlace válido cuando se reescribe el mismo contenido      1.55s  
+  ✓ it devuelve el enlace a válido, refresca sus dos huellas y registra… 0.74s  
+  ✓ it un enlace revalidado vuelve a ensuciarse si el contenido cambia…  0.79s  
+  ✓ it no deja revalidar a quien no tiene el permiso, y el error nombra… 1.52s  
+  ✓ it no revalida un enlace roto: le falta un extremo que mirar         1.03s  
+  ✓ it un agente no revalida un enlace cuyo extremo está firmado, y el…  0.78s  
+  ✓ it el mensaje nombra quién firmó, en calidad de qué y sobre qué ext… 0.80s  
+  ✓ it el agente sí revalida cuando ningún extremo está firmado          1.55s  
+  ✓ it un humano sí revalida aunque el extremo esté firmado              0.86s  
+  ✓ it corta también cuando el firmado es el destino, no el origen       0.86s  
+  ✓ it Postgres lo impide aunque se llame a la función saltándose el se… 0.71s  
+  ✓ it Postgres rechaza marcar sospechoso sin motivo                     1.46s  
+  ✓ it Postgres rechaza dejar un motivo en un enlace que no es sospecho… 0.78s  
+  ✓ it Postgres rechaza una revalidación a medias, con fecha pero sin a… 0.87s  
+  ✓ it Postgres rechaza un enlace de un artefacto a sí mismo             1.60s  
+  ✓ it sí admite un enlace entre dos filas distintas de la misma tabla   0.98s  
+  ✓ it sella las huellas desde el contenido real, ignorando lo que trai… 0.85s  
+  ✓ it no deja crear dos veces el mismo enlace                           0.89s  
+  ✓ it cuenta las sospechas abiertas del proyecto y las lista para la b… 1.58s  
+
+   PASS  Tests\Feature\TeamTest
+  ✓ it el seeder deja al admin con su agente y su key                    0.09s  
+  ✓ it dar de alta a una persona le crea su agente con la key ya emitid… 0.16s  
+  ✓ it una persona puede tener un agente por herramienta                 0.08s  
+  ✓ it regenerar la key invalida la anterior                             0.16s  
+  ✓ it la BD no admite un agente sin dueño                               0.07s  
+  ✓ it el login lista al equipo sin necesidad de token                   0.15s  
+  ✓ it elegir tu nombre te emite la sesión, sin escribir ninguna key     0.08s  
+  ✓ it un agente no puede entrar a la web                                0.16s  
+  ✓ it desactivar a alguien desactiva también a sus agentes              0.08s  
+  ✓ it el agente se autentica por MCP con la key de su entorno, sin act… 0.16s  
+  ✓ it sin key en el entorno, el MCP explica cómo configurarse           0.08s  
+  ✓ it una key revocada no autentica a nadie                             0.15s  
+
+   PASS  Tests\Feature\TrazaTest
+  ✓ it recorre los seis eslabones de un cambio cerrado con fechas y nom… 0.15s  
+  ✓ it se puede pedir por id igual que por código: fuera de la app nadi… 0.18s  
+  ✓ it enseña el agente y la persona responsable detrás en cada eslabón  0.11s  
+  ✓ it señala la sospecha en el eslabón que la causó, no en una lista s… 0.38s  
+  ✓ it responde en menos de un segundo con cincuenta bloques             0.64s  
+  ✓ it deja el primer eslabón vacío cuando el cambio no vino de ninguna… 0.33s  
+  ✓ it deja el enlace origina al abrir un cambio desde una necesidad     0.14s  
+
+   PASS  Tests\Feature\ViaRapidaTest
+  ✓ it abre un cambio sólo con título y solicitante, sin analista ni ri… 0.08s  
+  ✓ it deja pasar a en_construccion sin análisis, sin autorización y si… 0.15s  
+  ✓ it numera los cambios de la vía rápida en la misma serie que los no… 0.08s  
+  ✓ it no deja tomar el atajo a quien no reconoce la deuda               0.16s  
+  ✓ it deja rastro del salto, como cualquier otra transición             0.09s  
+  ✓ it no admite una deuda sin fecha para saldarla                       0.15s  
+  ✓ it no deja contraer la deuda después, con el análisis ya hecho       0.09s  
+  ✓ it responde 422 nombrando lo que falta del expediente al intentar c… 0.18s  
+  ✓ it sigue sin cerrar cuando el trabajo está hecho pero la deuda sigu… 0.14s  
+  ✓ it cierra en cuanto la deuda queda saldada                           0.23s  
+  ✓ it ensucia lo que se enlazó contra el riesgo anterior al corregirlo  0.18s  
+  ✓ it no da por regularizado un cambio que sigue sin requisitos         0.22s  
+  ✓ it no deja regularizar a quien no puede redactar la demanda          0.12s  
+  ✓ it avisa cuando no hay ninguna deuda que regularizar                 0.08s  
+  ✓ it regulariza por REST y devuelve la deuda ya saldada                0.16s  
+  ✓ it enseña la deuda en el listado de cambios, no en un campo escondi… 0.09s  
+  ✓ it señala como vencida la deuda cuyo plazo ya pasó                   0.14s  
+  ✓ it no cuenta como vencido lo que no debe nada                        0.08s  
+  ✓ it lista los pendientes con lo vencido primero                       0.14s  
+  ✓ it registra trabajo ya en marcha sin tocarlo                         0.10s  
+  ✓ it no registra como propio el trabajo de otro proyecto               0.15s  
+  ✓ it abre y arranca por REST con lo mínimo                             0.10s  
+
+   PASS  Tests\Feature\WorkflowTest
+  ✓ it un agente toma un bloque listo y recibe el payload para trabajar  0.15s  
+  ✓ it el payload refleja el diseño de ahora, no el de cuando se tomó e… 0.10s  
+  ✓ it no se puede tomar un bloque que no está listo                     0.13s  
+  ✓ it dos workers no pueden tomar el mismo bloque                       0.08s  
+  ✓ it planificar el bloque crea una microtarea por entregable, y no la… 0.15s  
+  ✓ it no se planifica un bloque que no declara entregables              0.09s  
+  ✓ it no se puede completar una microtarea sin evidencia                0.16s  
+  ✓ it no se cierra el bloque si queda una microtarea sin completar      0.09s  
+  ✓ it no se cierra el bloque con un criterio sin probar, y el error di… 0.16s  
+  ✓ it con el círculo cerrado, completar deja el bloque en verifying, n… 0.11s  
+  ✓ it un worker no puede completar la task de otro                      0.13s  
+  ✓ it el humano aprueba y el bloque queda cerrado con su firma          0.11s  
+  ✓ it no se aprueba un bloque que no cumple el gate, aunque quien apru… 0.15s  
+  ✓ it un agente no puede aprobar aunque el círculo esté cerrado         0.11s  
+  ✓ it devolver el bloque lo manda de vuelta al worker y deja el motivo  0.17s  
+  ✓ it el flujo completo por HTTP: claim, plan, evidencia vinculada, co… 0.16s  
+  ✓ it lista solo mis tasks con ?mine=1                                  1.09s  
+  ✓ it no deja crear a mano una task de implementación                   0.13s  
+
+  Tests:    562 passed (3408 assertions)
+  Duration: 210.20s
+
+
+exit=0 (pint PASS 342 files; phpstan nivel 8 [OK] No errors; pest 562 passed / 3408 assertions, 210.20s)

@@ -1,0 +1,16 @@
+
+   PASS  Tests\Feature\DecisionMcpTest
+  ✓ it el catálogo de tools no expone promoción, aprobación, resolució… 66.98s  
+  ✓ it un agente propone una decisión que nace propuesta; sólo un human… 0.21s  
+  ✓ it proponer una sucesora sin motivo de reemplazo se rechaza; con mo… 0.10s  
+  ✓ it un agente con contradiccion.abrir abre la contradicción; sin el…  0.12s  
+  ✓ it un human_admin sin el permiso contradiccion.resolver recibe 403…  0.19s  
+  ✓ it Postgres rechaza que un agente resuelva una contradicción aunque… 0.10s  
+  ✓ it un agente que abre una contradicción entre un cambio y un invari… 0.19s  
+  ✓ it Postgres rechaza por trigger una contradicción insertada directo… 0.10s  
+  ✓ it una contradicción ya resuelta por un humano rechaza un UPDATE qu… 0.15s  
+
+  Tests:    9 passed (610 assertions)
+  Duration: 68.19s
+
+exit=0

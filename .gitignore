@@ -1,0 +1,3 @@
+# Salidas de CI y verificación: la evidencia se cita, no se versiona en bruto
+*.log
+/tmp/

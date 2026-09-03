@@ -1,0 +1,1117 @@
+{
+  "generado": "2026-08-30T23:42:56-05:00",
+  "base": "/home/leonardo/.local/share/opencode/opencode.db",
+  "estimador": {
+    "chars_por_token": 4.0,
+    "nota": "la base no guarda tokens por herramienta; se estiman por caracteres"
+  },
+  "total": {
+    "sesiones": 32,
+    "tokens_input": 1661526,
+    "tokens_output": 118258,
+    "tokens_cache_read": 9227520,
+    "tokens_cache_write": 0,
+    "contexto_total": 10889046,
+    "turnos_asistente": 424,
+    "coste_usd": 0.042914,
+    "tasa_kc": 0.8474,
+    "ratio_entrada_salida": 92.1
+  },
+  "cobertura_flota": {
+    "roles": [
+      "orquestador",
+      "ejecutor",
+      "verificador"
+    ],
+    "sesiones_flota": 8,
+    "sesiones_no_flota": 24,
+    "contexto_flota": 2463332,
+    "contexto_no_flota": 8425714,
+    "pct_contexto_flota": 22.62,
+    "ventana": {
+      "desde": "2026-08-25T14:47:26-05:00",
+      "hasta": "2026-08-28T22:44:22-05:00"
+    },
+    "nota": "la base de opencode sólo cubre las sesiones que corrieron EN opencode; si la flota se portó a otro runtime, su consumo posterior no está aquí"
+  },
+  "por_agente": {
+    "AGENTS": {
+      "sesiones": 2,
+      "tokens_input": 255032,
+      "tokens_output": 10954,
+      "tokens_cache_read": 850880,
+      "tokens_cache_write": 0,
+      "contexto_total": 1105912,
+      "turnos_asistente": 50,
+      "duracion_s": 11792,
+      "tasa_kc": 0.7694,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 22118
+    },
+    "build": {
+      "sesiones": 14,
+      "tokens_input": 591872,
+      "tokens_output": 45246,
+      "tokens_cache_read": 4169024,
+      "tokens_cache_write": 0,
+      "contexto_total": 4760896,
+      "turnos_asistente": 203,
+      "duracion_s": 19657,
+      "tasa_kc": 0.8757,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 23453
+    },
+    "ejecutor": {
+      "sesiones": 2,
+      "tokens_input": 67385,
+      "tokens_output": 3210,
+      "tokens_cache_read": 248448,
+      "tokens_cache_write": 0,
+      "contexto_total": 315833,
+      "turnos_asistente": 18,
+      "duracion_s": 736,
+      "tasa_kc": 0.7866,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 17546
+    },
+    "explore": {
+      "sesiones": 4,
+      "tokens_input": 175841,
+      "tokens_output": 30930,
+      "tokens_cache_read": 969728,
+      "tokens_cache_write": 0,
+      "contexto_total": 1145569,
+      "turnos_asistente": 41,
+      "duracion_s": 804,
+      "tasa_kc": 0.8465,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 27941
+    },
+    "general": {
+      "sesiones": 2,
+      "tokens_input": 42197,
+      "tokens_output": 3657,
+      "tokens_cache_read": 195840,
+      "tokens_cache_write": 0,
+      "contexto_total": 238037,
+      "turnos_asistente": 17,
+      "duracion_s": 589,
+      "tasa_kc": 0.8227,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 14002
+    },
+    "orquestador": {
+      "sesiones": 5,
+      "tokens_input": 356811,
+      "tokens_output": 18633,
+      "tokens_cache_read": 1747776,
+      "tokens_cache_write": 0,
+      "contexto_total": 2104587,
+      "turnos_asistente": 52,
+      "duracion_s": 45632,
+      "tasa_kc": 0.8305,
+      "coste_usd": 0.032745,
+      "tokens_por_turno": 40473
+    },
+    "plan": {
+      "sesiones": 2,
+      "tokens_input": 156100,
+      "tokens_output": 4909,
+      "tokens_cache_read": 1019200,
+      "tokens_cache_write": 0,
+      "contexto_total": 1175300,
+      "turnos_asistente": 39,
+      "duracion_s": 3364,
+      "tasa_kc": 0.8672,
+      "coste_usd": 0.001752,
+      "tokens_por_turno": 30136
+    },
+    "verificador": {
+      "sesiones": 1,
+      "tokens_input": 16288,
+      "tokens_output": 719,
+      "tokens_cache_read": 26624,
+      "tokens_cache_write": 0,
+      "contexto_total": 42912,
+      "turnos_asistente": 4,
+      "duracion_s": 58,
+      "tasa_kc": 0.6204,
+      "coste_usd": 0.008417,
+      "tokens_por_turno": 10728
+    }
+  },
+  "sesiones": [
+    {
+      "sesion": "ses_fc3aa9632ffeYEczZEzzyMYcXn",
+      "slug": "jolly-garden",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 144597,
+      "tokens_output": 13990,
+      "tokens_cache_read": 1294272,
+      "tokens_cache_write": 0,
+      "contexto_total": 1438869,
+      "turnos_asistente": 34,
+      "duracion_s": 3088,
+      "tasa_kc": 0.8995,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 42320
+    },
+    {
+      "sesion": "ses_fc477a67effeXadpvugzNEmQtZ",
+      "slug": "silent-knight",
+      "agente": "orquestador",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 159152,
+      "tokens_output": 11103,
+      "tokens_cache_read": 1218304,
+      "tokens_cache_write": 0,
+      "contexto_total": 1377456,
+      "turnos_asistente": 29,
+      "duracion_s": 3655,
+      "tasa_kc": 0.8845,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 47498
+    },
+    {
+      "sesion": "ses_fc3e0a334ffekPxN8KvRYvVArU",
+      "slug": "brave-comet",
+      "agente": "plan",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 143629,
+      "tokens_output": 4888,
+      "tokens_cache_read": 1019200,
+      "tokens_cache_write": 0,
+      "contexto_total": 1162829,
+      "turnos_asistente": 37,
+      "duracion_s": 3322,
+      "tasa_kc": 0.8765,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 31428
+    },
+    {
+      "sesion": "ses_fc558c369ffeq3VbuxCdXISvlN",
+      "slug": "shiny-pixel",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 122163,
+      "tokens_output": 6742,
+      "tokens_cache_read": 867776,
+      "tokens_cache_write": 0,
+      "contexto_total": 989939,
+      "turnos_asistente": 35,
+      "duracion_s": 4349,
+      "tasa_kc": 0.8766,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 28284
+    },
+    {
+      "sesion": "ses_fc52ff5c5ffelg6dnblV9a8psS",
+      "slug": "playful-otter",
+      "agente": "AGENTS",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 158716,
+      "tokens_output": 8227,
+      "tokens_cache_read": 580992,
+      "tokens_cache_write": 0,
+      "contexto_total": 739708,
+      "turnos_asistente": 35,
+      "duracion_s": 10905,
+      "tasa_kc": 0.7854,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 21135
+    },
+    {
+      "sesion": "ses_fc481fe70ffe6X6zRaVFUjXWNf",
+      "slug": "jolly-knight",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 47896,
+      "tokens_output": 4005,
+      "tokens_cache_read": 644416,
+      "tokens_cache_write": 0,
+      "contexto_total": 692312,
+      "turnos_asistente": 34,
+      "duracion_s": 6085,
+      "tasa_kc": 0.9308,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 20362
+    },
+    {
+      "sesion": "ses_fc39b43b8ffeixWwV87blYRcPA",
+      "slug": "mighty-forest",
+      "agente": "explore",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 53472,
+      "tokens_output": 11835,
+      "tokens_cache_read": 395392,
+      "tokens_cache_write": 0,
+      "contexto_total": 448864,
+      "turnos_asistente": 13,
+      "duracion_s": 290,
+      "tasa_kc": 0.8809,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 34528
+    },
+    {
+      "sesion": "ses_fc37a2b69ffegfKCV2pKGicMRz",
+      "slug": "playful-knight",
+      "agente": "orquestador",
+      "modelo": "big-pickle",
+      "tokens_input": 115166,
+      "tokens_output": 5652,
+      "tokens_cache_read": 277440,
+      "tokens_cache_write": 0,
+      "contexto_total": 392606,
+      "turnos_asistente": 12,
+      "duracion_s": 41835,
+      "tasa_kc": 0.7067,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 32717
+    },
+    {
+      "sesion": "ses_fc48d0e6dffeXzwQZyaVapIzRt",
+      "slug": "glowing-garden",
+      "agente": "AGENTS",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 96316,
+      "tokens_output": 2727,
+      "tokens_cache_read": 269888,
+      "tokens_cache_write": 0,
+      "contexto_total": 366204,
+      "turnos_asistente": 15,
+      "duracion_s": 887,
+      "tasa_kc": 0.737,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 24414
+    },
+    {
+      "sesion": "ses_fc3b5d091ffemvRe9n2RsqPpIW",
+      "slug": "stellar-pixel",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 32045,
+      "tokens_output": 2321,
+      "tokens_cache_read": 280128,
+      "tokens_cache_write": 0,
+      "contexto_total": 312173,
+      "turnos_asistente": 17,
+      "duracion_s": 200,
+      "tasa_kc": 0.8973,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 18363
+    },
+    {
+      "sesion": "ses_fb4645acaffenBW9yTKPqkqAKB",
+      "slug": "hidden-meadow",
+      "agente": "orquestador",
+      "modelo": "deepseek-v4-pro",
+      "tokens_input": 51842,
+      "tokens_output": 1041,
+      "tokens_cache_read": 220672,
+      "tokens_cache_write": 0,
+      "contexto_total": 272514,
+      "turnos_asistente": 7,
+      "duracion_s": 55,
+      "tasa_kc": 0.8098,
+      "coste_usd": 0.025462,
+      "tokens_por_turno": 38931
+    },
+    {
+      "sesion": "ses_fc3964f74ffencyiiQCrtYA49v",
+      "slug": "quiet-comet",
+      "agente": "explore",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 45017,
+      "tokens_output": 4892,
+      "tokens_cache_read": 222336,
+      "tokens_cache_write": 0,
+      "contexto_total": 267353,
+      "turnos_asistente": 10,
+      "duracion_s": 172,
+      "tasa_kc": 0.8316,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 26735
+    },
+    {
+      "sesion": "ses_fc5828203ffeXi1BkYGpqviYSW",
+      "slug": "tidy-canyon",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 14959,
+      "tokens_output": 2425,
+      "tokens_cache_read": 242944,
+      "tokens_cache_write": 0,
+      "contexto_total": 257903,
+      "turnos_asistente": 16,
+      "duracion_s": 659,
+      "tasa_kc": 0.942,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 16119
+    },
+    {
+      "sesion": "ses_fc39b79d4ffeWO37EkpPcVN4r1",
+      "slug": "hidden-moon",
+      "agente": "explore",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 38087,
+      "tokens_output": 9386,
+      "tokens_cache_read": 177280,
+      "tokens_cache_write": 0,
+      "contexto_total": 215367,
+      "turnos_asistente": 9,
+      "duracion_s": 219,
+      "tasa_kc": 0.8232,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 23930
+    },
+    {
+      "sesion": "ses_fc39681a1ffelEO36d6ldB6ChA",
+      "slug": "playful-pixel",
+      "agente": "explore",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 39265,
+      "tokens_output": 4817,
+      "tokens_cache_read": 174720,
+      "tokens_cache_write": 0,
+      "contexto_total": 213985,
+      "turnos_asistente": 9,
+      "duracion_s": 123,
+      "tasa_kc": 0.8165,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 23776
+    },
+    {
+      "sesion": "ses_fc411f03fffevlin17NoRjhR7A",
+      "slug": "swift-squid",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 39663,
+      "tokens_output": 939,
+      "tokens_cache_read": 159232,
+      "tokens_cache_write": 0,
+      "contexto_total": 198895,
+      "turnos_asistente": 12,
+      "duracion_s": 3498,
+      "tasa_kc": 0.8006,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 16575
+    },
+    {
+      "sesion": "ses_fc116b483ffekKVUeoFWZlaUzl",
+      "slug": "quiet-cabin",
+      "agente": "build",
+      "modelo": "big-pickle",
+      "tokens_input": 16456,
+      "tokens_output": 2113,
+      "tokens_cache_read": 179264,
+      "tokens_cache_write": 0,
+      "contexto_total": 195720,
+      "turnos_asistente": 12,
+      "duracion_s": 426,
+      "tasa_kc": 0.9159,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 16310
+    },
+    {
+      "sesion": "ses_fc366a4d5ffe1kYp0I84gJyPDt",
+      "slug": "witty-pixel",
+      "agente": "ejecutor",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 50571,
+      "tokens_output": 2276,
+      "tokens_cache_read": 135744,
+      "tokens_cache_write": 0,
+      "contexto_total": 186315,
+      "turnos_asistente": 8,
+      "duracion_s": 595,
+      "tasa_kc": 0.7286,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 23289
+    },
+    {
+      "sesion": "ses_fbbc81cb4ffeLCipJerhl2f3TK",
+      "slug": "lucky-river",
+      "agente": "build",
+      "modelo": "big-pickle",
+      "tokens_input": 49899,
+      "tokens_output": 9071,
+      "tokens_cache_read": 126208,
+      "tokens_cache_write": 0,
+      "contexto_total": 176107,
+      "turnos_asistente": 6,
+      "duracion_s": 476,
+      "tasa_kc": 0.7167,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 29351
+    },
+    {
+      "sesion": "ses_fbb5716c8ffer9HCqS0DHs50Zc",
+      "slug": "swift-river",
+      "agente": "build",
+      "modelo": "big-pickle",
+      "tokens_input": 35239,
+      "tokens_output": 1297,
+      "tokens_cache_read": 138240,
+      "tokens_cache_write": 0,
+      "contexto_total": 173479,
+      "turnos_asistente": 11,
+      "duracion_s": 289,
+      "tasa_kc": 0.7969,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 15771
+    },
+    {
+      "sesion": "ses_fc4c24498ffeCOGWn5WGH6NpQI",
+      "slug": "calm-planet",
+      "agente": "general",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 26307,
+      "tokens_output": 1714,
+      "tokens_cache_read": 107712,
+      "tokens_cache_write": 0,
+      "contexto_total": 134019,
+      "turnos_asistente": 9,
+      "duracion_s": 461,
+      "tasa_kc": 0.8037,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 14891
+    },
+    {
+      "sesion": "ses_fc12439fdffeN3x3wrfCWTjxeL",
+      "slug": "lucky-engine",
+      "agente": "ejecutor",
+      "modelo": "big-pickle",
+      "tokens_input": 16814,
+      "tokens_output": 934,
+      "tokens_cache_read": 112704,
+      "tokens_cache_write": 0,
+      "contexto_total": 129518,
+      "turnos_asistente": 10,
+      "duracion_s": 141,
+      "tasa_kc": 0.8702,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 12952
+    },
+    {
+      "sesion": "ses_fc4c572c1ffelC79gsrM4aOmU0",
+      "slug": "witty-rocket",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 35506,
+      "tokens_output": 777,
+      "tokens_cache_read": 73088,
+      "tokens_cache_write": 0,
+      "contexto_total": 108594,
+      "turnos_asistente": 8,
+      "duracion_s": 103,
+      "tasa_kc": 0.673,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 13574
+    },
+    {
+      "sesion": "ses_fc4badf04ffe9M4fRf5ndbA41v",
+      "slug": "sunny-panda",
+      "agente": "general",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 15890,
+      "tokens_output": 1943,
+      "tokens_cache_read": 88128,
+      "tokens_cache_write": 0,
+      "contexto_total": 104018,
+      "turnos_asistente": 8,
+      "duracion_s": 128,
+      "tasa_kc": 0.8472,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 13002
+    },
+    {
+      "sesion": "ses_fc58965e8ffeke3fKlNHM5tfr0",
+      "slug": "proud-nebula",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 25010,
+      "tokens_output": 439,
+      "tokens_cache_read": 50112,
+      "tokens_cache_write": 0,
+      "contexto_total": 75122,
+      "turnos_asistente": 6,
+      "duracion_s": 115,
+      "tasa_kc": 0.6671,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 12520
+    },
+    {
+      "sesion": "ses_fbb554b9bffeopgGkOEndNL776",
+      "slug": "stellar-falcon",
+      "agente": "build",
+      "modelo": "big-pickle",
+      "tokens_input": 15689,
+      "tokens_output": 521,
+      "tokens_cache_read": 53248,
+      "tokens_cache_write": 0,
+      "contexto_total": 68937,
+      "turnos_asistente": 6,
+      "duracion_s": 62,
+      "tasa_kc": 0.7724,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 11490
+    },
+    {
+      "sesion": "ses_fc40de3a7ffeTn3fpAXZNIpJIO",
+      "slug": "witty-sailor",
+      "agente": "build",
+      "modelo": "x-preview-f-free",
+      "tokens_input": 5485,
+      "tokens_output": 424,
+      "tokens_cache_read": 58304,
+      "tokens_cache_write": 0,
+      "contexto_total": 63789,
+      "turnos_asistente": 5,
+      "duracion_s": 295,
+      "tasa_kc": 0.914,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 12758
+    },
+    {
+      "sesion": "ses_fb46291d1ffe3mcTm410NcYs3Q",
+      "slug": "cosmic-eagle",
+      "agente": "verificador",
+      "modelo": "deepseek-v4-pro",
+      "tokens_input": 16288,
+      "tokens_output": 719,
+      "tokens_cache_read": 26624,
+      "tokens_cache_write": 0,
+      "contexto_total": 42912,
+      "turnos_asistente": 4,
+      "duracion_s": 58,
+      "tasa_kc": 0.6204,
+      "coste_usd": 0.008417,
+      "tokens_por_turno": 10728
+    },
+    {
+      "sesion": "ses_fc0fff29affeWv44MyOTyeZC2Q",
+      "slug": "misty-eagle",
+      "agente": "orquestador",
+      "modelo": "big-pickle",
+      "tokens_input": 15075,
+      "tokens_output": 439,
+      "tokens_cache_read": 20864,
+      "tokens_cache_write": 0,
+      "contexto_total": 35939,
+      "turnos_asistente": 2,
+      "duracion_s": 81,
+      "tasa_kc": 0.5805,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 17970
+    },
+    {
+      "sesion": "ses_fb46beef7ffeM4JKCP3Fz9TYID",
+      "slug": "silent-falcon",
+      "agente": "orquestador",
+      "modelo": "deepseek-v4-pro",
+      "tokens_input": 15576,
+      "tokens_output": 398,
+      "tokens_cache_read": 10496,
+      "tokens_cache_write": 0,
+      "contexto_total": 26072,
+      "turnos_asistente": 2,
+      "duracion_s": 6,
+      "tasa_kc": 0.4026,
+      "coste_usd": 0.007283,
+      "tokens_por_turno": 13036
+    },
+    {
+      "sesion": "ses_fb46d5fb2ffeS354Wn2LLDoBLI",
+      "slug": "curious-star",
+      "agente": "plan",
+      "modelo": "deepseek-v4-flash",
+      "tokens_input": 12471,
+      "tokens_output": 21,
+      "tokens_cache_read": 0,
+      "tokens_cache_write": 0,
+      "contexto_total": 12471,
+      "turnos_asistente": 2,
+      "duracion_s": 42,
+      "tasa_kc": 0.0,
+      "coste_usd": 0.001752,
+      "tokens_por_turno": 6236
+    },
+    {
+      "sesion": "ses_fc125b963ffe1VAKW5Acsz9reO",
+      "slug": "kind-knight",
+      "agente": "build",
+      "modelo": "big-pickle",
+      "tokens_input": 7265,
+      "tokens_output": 182,
+      "tokens_cache_read": 1792,
+      "tokens_cache_write": 0,
+      "contexto_total": 9057,
+      "turnos_asistente": 1,
+      "duracion_s": 12,
+      "tasa_kc": 0.1979,
+      "coste_usd": 0.0,
+      "tokens_por_turno": 9057
+    }
+  ],
+  "herramientas_global": [
+    {
+      "herramienta": "read",
+      "llamadas": 166,
+      "chars_bruto": 1044018,
+      "tokens_bruto": 261004,
+      "pct_bruto": 54.93,
+      "tokens_reenviados": 2427781,
+      "pct_reenviado": 52.7
+    },
+    {
+      "herramienta": "bash:otros",
+      "llamadas": 288,
+      "chars_bruto": 297843,
+      "tokens_bruto": 74461,
+      "pct_bruto": 15.67,
+      "tokens_reenviados": 725060,
+      "pct_reenviado": 15.74
+    },
+    {
+      "herramienta": "task",
+      "llamadas": 9,
+      "chars_bruto": 111616,
+      "tokens_bruto": 27904,
+      "pct_bruto": 5.87,
+      "tokens_reenviados": 421880,
+      "pct_reenviado": 9.16
+    },
+    {
+      "herramienta": "grep",
+      "llamadas": 24,
+      "chars_bruto": 111273,
+      "tokens_bruto": 27818,
+      "pct_bruto": 5.85,
+      "tokens_reenviados": 324461,
+      "pct_reenviado": 7.04
+    },
+    {
+      "herramienta": "webfetch",
+      "llamadas": 4,
+      "chars_bruto": 52232,
+      "tokens_bruto": 13058,
+      "pct_bruto": 2.75,
+      "tokens_reenviados": 268644,
+      "pct_reenviado": 5.83
+    },
+    {
+      "herramienta": "websearch",
+      "llamadas": 7,
+      "chars_bruto": 147346,
+      "tokens_bruto": 36836,
+      "pct_bruto": 7.75,
+      "tokens_reenviados": 156387,
+      "pct_reenviado": 3.39
+    },
+    {
+      "herramienta": "glob",
+      "llamadas": 20,
+      "chars_bruto": 29397,
+      "tokens_bruto": 7349,
+      "pct_bruto": 1.55,
+      "tokens_reenviados": 80322,
+      "pct_reenviado": 1.74
+    },
+    {
+      "herramienta": "bash:diff",
+      "llamadas": 19,
+      "chars_bruto": 11830,
+      "tokens_bruto": 2958,
+      "pct_bruto": 0.62,
+      "tokens_reenviados": 47100,
+      "pct_reenviado": 1.02
+    },
+    {
+      "herramienta": "skill",
+      "llamadas": 1,
+      "chars_bruto": 17149,
+      "tokens_bruto": 4287,
+      "pct_bruto": 0.9,
+      "tokens_reenviados": 42872,
+      "pct_reenviado": 0.93
+    },
+    {
+      "herramienta": "bash:ci",
+      "llamadas": 7,
+      "chars_bruto": 44452,
+      "tokens_bruto": 11113,
+      "pct_bruto": 2.34,
+      "tokens_reenviados": 33245,
+      "pct_reenviado": 0.72
+    },
+    {
+      "herramienta": "quipu_get_analysis_fields",
+      "llamadas": 1,
+      "chars_bruto": 11940,
+      "tokens_bruto": 2985,
+      "pct_bruto": 0.63,
+      "tokens_reenviados": 17910,
+      "pct_reenviado": 0.39
+    },
+    {
+      "herramienta": "todowrite",
+      "llamadas": 9,
+      "chars_bruto": 6661,
+      "tokens_bruto": 1665,
+      "pct_bruto": 0.35,
+      "tokens_reenviados": 16634,
+      "pct_reenviado": 0.36
+    },
+    {
+      "herramienta": "invalid",
+      "llamadas": 2,
+      "chars_bruto": 4774,
+      "tokens_bruto": 1194,
+      "pct_bruto": 0.25,
+      "tokens_reenviados": 14913,
+      "pct_reenviado": 0.32
+    },
+    {
+      "herramienta": "decisiones_dominio_contexto",
+      "llamadas": 1,
+      "chars_bruto": 4384,
+      "tokens_bruto": 1096,
+      "pct_bruto": 0.23,
+      "tokens_reenviados": 12056,
+      "pct_reenviado": 0.26
+    },
+    {
+      "herramienta": "question",
+      "llamadas": 8,
+      "chars_bruto": 2326,
+      "tokens_bruto": 582,
+      "pct_bruto": 0.12,
+      "tokens_reenviados": 11818,
+      "pct_reenviado": 0.26
+    },
+    {
+      "herramienta": "quipu_get_import_contract",
+      "llamadas": 1,
+      "chars_bruto": 2412,
+      "tokens_bruto": 603,
+      "pct_bruto": 0.13,
+      "tokens_reenviados": 3618,
+      "pct_reenviado": 0.08
+    },
+    {
+      "herramienta": "write",
+      "llamadas": 17,
+      "chars_bruto": 408,
+      "tokens_bruto": 102,
+      "pct_bruto": 0.02,
+      "tokens_reenviados": 1206,
+      "pct_reenviado": 0.03
+    },
+    {
+      "herramienta": "edit",
+      "llamadas": 14,
+      "chars_bruto": 364,
+      "tokens_bruto": 91,
+      "pct_bruto": 0.02,
+      "tokens_reenviados": 1105,
+      "pct_reenviado": 0.02
+    },
+    {
+      "herramienta": "quipu_get_project_analysis",
+      "llamadas": 1,
+      "chars_bruto": 62,
+      "tokens_bruto": 16,
+      "pct_bruto": 0.0,
+      "tokens_reenviados": 93,
+      "pct_reenviado": 0.0
+    }
+  ],
+  "herramientas_por_rol": {
+    "orquestador": [
+      {
+        "herramienta": "read",
+        "llamadas": null,
+        "chars_bruto": 408321,
+        "tokens_bruto": 102080,
+        "pct_bruto": 91.81,
+        "tokens_reenviados": 985204,
+        "pct_reenviado": 89.16
+      },
+      {
+        "herramienta": "bash:otros",
+        "llamadas": null,
+        "chars_bruto": 18087,
+        "tokens_bruto": 4522,
+        "pct_bruto": 4.07,
+        "tokens_reenviados": 61250,
+        "pct_reenviado": 5.54
+      },
+      {
+        "herramienta": "glob",
+        "llamadas": null,
+        "chars_bruto": 4278,
+        "tokens_bruto": 1070,
+        "pct_bruto": 0.96,
+        "tokens_reenviados": 18876,
+        "pct_reenviado": 1.71
+      },
+      {
+        "herramienta": "grep",
+        "llamadas": null,
+        "chars_bruto": 4140,
+        "tokens_bruto": 1035,
+        "pct_bruto": 0.93,
+        "tokens_reenviados": 18630,
+        "pct_reenviado": 1.69
+      },
+      {
+        "herramienta": "bash:diff",
+        "llamadas": null,
+        "chars_bruto": 2265,
+        "tokens_bruto": 566,
+        "pct_bruto": 0.51,
+        "tokens_reenviados": 8387,
+        "pct_reenviado": 0.76
+      },
+      {
+        "herramienta": "task",
+        "llamadas": null,
+        "chars_bruto": 5061,
+        "tokens_bruto": 1265,
+        "pct_bruto": 1.14,
+        "tokens_reenviados": 6312,
+        "pct_reenviado": 0.57
+      },
+      {
+        "herramienta": "todowrite",
+        "llamadas": null,
+        "chars_bruto": 2513,
+        "tokens_bruto": 628,
+        "pct_bruto": 0.57,
+        "tokens_reenviados": 6270,
+        "pct_reenviado": 0.57
+      },
+      {
+        "herramienta": "edit",
+        "llamadas": null,
+        "chars_bruto": 52,
+        "tokens_bruto": 13,
+        "pct_bruto": 0.01,
+        "tokens_reenviados": 46,
+        "pct_reenviado": 0.0
+      },
+      {
+        "herramienta": "write",
+        "llamadas": null,
+        "chars_bruto": 24,
+        "tokens_bruto": 6,
+        "pct_bruto": 0.01,
+        "tokens_reenviados": 30,
+        "pct_reenviado": 0.0
+      }
+    ],
+    "ejecutor": [
+      {
+        "herramienta": "read",
+        "llamadas": null,
+        "chars_bruto": 37297,
+        "tokens_bruto": 9324,
+        "pct_bruto": 45.48,
+        "tokens_reenviados": 73677,
+        "pct_reenviado": 68.33
+      },
+      {
+        "herramienta": "bash:ci",
+        "llamadas": null,
+        "chars_bruto": 41142,
+        "tokens_bruto": 10286,
+        "pct_bruto": 50.17,
+        "tokens_reenviados": 30256,
+        "pct_reenviado": 28.06
+      },
+      {
+        "herramienta": "bash:otros",
+        "llamadas": null,
+        "chars_bruto": 3566,
+        "tokens_bruto": 892,
+        "pct_bruto": 4.35,
+        "tokens_reenviados": 3890,
+        "pct_reenviado": 3.61
+      }
+    ],
+    "verificador": [
+      {
+        "herramienta": "read",
+        "llamadas": null,
+        "chars_bruto": 32924,
+        "tokens_bruto": 8231,
+        "pct_bruto": 93.47,
+        "tokens_reenviados": 16482,
+        "pct_reenviado": 94.87
+      },
+      {
+        "herramienta": "bash:diff",
+        "llamadas": null,
+        "chars_bruto": 1263,
+        "tokens_bruto": 316,
+        "pct_bruto": 3.59,
+        "tokens_reenviados": 632,
+        "pct_reenviado": 3.64
+      },
+      {
+        "herramienta": "bash:otros",
+        "llamadas": null,
+        "chars_bruto": 1036,
+        "tokens_bruto": 259,
+        "pct_bruto": 2.94,
+        "tokens_reenviados": 259,
+        "pct_reenviado": 1.49
+      }
+    ]
+  },
+  "top_archivos_leidos": [
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/.session/progress.json",
+      "chars": 267496,
+      "tokens": 66874
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/PLAN/F1-execplan.md",
+      "chars": 46010,
+      "tokens": 11502
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/code/api/app/Protocol/AdoptionEngine.php",
+      "chars": 34091,
+      "tokens": 8523
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/code/api/routes/api.php",
+      "chars": 32074,
+      "tokens": 8018
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/CONSTITUCION.md",
+      "chars": 21304,
+      "tokens": 5326
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/VALIDACION.md",
+      "chars": 20776,
+      "tokens": 5194
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/code/api/database/migrations/2026_07_20_160000_create_cambio_gate.php",
+      "chars": 19451,
+      "tokens": 4863
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/code/api/database/migrations/2026_07_20_140000_create_cambio.php",
+      "chars": 19407,
+      "tokens": 4852
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/PLAN/F0-execplan.md",
+      "chars": 17995,
+      "tokens": 4499
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/developTool/02-plan-fases.md",
+      "chars": 16807,
+      "tokens": 4202
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/wt/f1-t02-migraciones/code/api/database/migrations/2026_08_26_100100_create_decision_supersede.php",
+      "chars": 16422,
+      "tokens": 4106
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/chasqui_n8n/AGENTS.md",
+      "chars": 16108,
+      "tokens": 4027
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/chasqui_n8n/bin/verificar.sh",
+      "chars": 15239,
+      "tokens": 3810
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/ESTADO.md",
+      "chars": 14976,
+      "tokens": 3744
+    },
+    {
+      "archivo": "/mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/ESCALAMIENTO.md",
+      "chars": 14370,
+      "tokens": 3592
+    }
+  ],
+  "top_comandos_bash": [
+    {
+      "comando": "find /mnt/datos/Programacion/QUIPU_ENTERPRISE/.opencode /mnt/datos/Programacion/QUIPU_ENTERPRISE/.claude -type f 2>/dev/",
+      "chars": 51265,
+      "tokens": 12816
+    },
+    {
+      "comando": "time docker compose exec -T api composer ci",
+      "chars": 40340,
+      "tokens": 10085
+    },
+    {
+      "comando": "ls -la /mnt/datos/Programacion/QUIPU_ENTERPRISE/sistema-a/.opencode/agents; cat /mnt/datos/Programacion/QUIPU_ENTERPRISE",
+      "chars": 32019,
+      "tokens": 8005
+    },
+    {
+      "comando": "head -100 /mnt/datos/Programacion/QUIPU_ENTERPRISE/README.md; echo \"=====GUIA=====\"; head -150 /mnt/datos/Programacion/Q",
+      "chars": 11024,
+      "tokens": 2756
+    },
+    {
+      "comando": "sed -n '150,260p' /mnt/datos/Programacion/QUIPU_ENTERPRISE/GUIA-USUARIO.md; echo \"=====ESTADO=====\"; head -60 /mnt/datos",
+      "chars": 9616,
+      "tokens": 2404
+    },
+    {
+      "comando": "docker compose logs api 2>&1 | tail -40",
+      "chars": 7876,
+      "tokens": 1969
+    },
+    {
+      "comando": "head -20 db/pruebas/*.sql",
+      "chars": 7025,
+      "tokens": 1756
+    },
+    {
+      "comando": "grep -n \"^estado:\" pedidos/*.md pedidos/archivo/*.md 2>/dev/null; echo \"---\"; ls agent-context/contracts/ 2>/dev/null; e",
+      "chars": 5507,
+      "tokens": 1377
+    },
+    {
+      "comando": "grep -rln \"business_rule\" /mnt/datos/Programacion/QUIPU_ENTERPRISE/code/api/database/migrations/ | head; echo ===; grep ",
+      "chars": 4890,
+      "tokens": 1222
+    },
+    {
+      "comando": "cat /mnt/datos/Programacion/chasqui_n8n/decisiones/README.md; echo \"===INDICE===\"; cat /mnt/datos/Programacion/chasqui_n",
+      "chars": 4315,
+      "tokens": 1079
+    }
+  ],
+  "calibracion": {
+    "tokens_estimados_salida_herramientas": 475122,
+    "crecimiento_real_de_contexto_entre_pasos": 908187,
+    "nota": "el primero debe ser una fracción coherente del segundo; el resto es prompt de sistema, instrucciones de agente, texto y razonamiento"
+  },
+  "s3": {
+    "supuesto": "S3: el grueso del contexto del verificador es salida de CI y diffs",
+    "pct_ci_diff_en_verificador": 3.64,
+    "pct_read_en_verificador": 94.87,
+    "pct_ci_diff_global": 1.74,
+    "sesiones_verificador": 1,
+    "ejecuciones_ci_por_el_verificador": 0,
+    "veredicto": "REFUTADO",
+    "lectura": "CI+diff aportan 3.64% del contexto reenviado del verificador; las lecturas de archivo aportan 94.87%."
+  }
+}
