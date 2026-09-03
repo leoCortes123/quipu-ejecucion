@@ -2,7 +2,7 @@
 
 Antes de este documento la deuda vivía en tres lugares que nadie leía juntos:
 `ESTADO/ESTADO.md` § «Deuda declarada», el array `abierto[]` del ledger
-(`.session/progress.json`, 5 entradas vivas) y `PLAN/FLOTA/PLAN_IMPLEMENTACION.md` §6.4.
+(`sesiones/progress.json`, 5 entradas vivas) y `../metodologia/archivo/FLOTA/PLAN_IMPLEMENTACION.md` §6.4.
 Aquí está consolidada, clasificada y con dueño. **Este es el insumo del ExecPlan de F2.**
 
 Fecha de consolidación: 2026-09-01. Ninguna entrada se inventa: cada una cita su origen.
@@ -13,9 +13,9 @@ Fecha de consolidación: 2026-09-01. Ninguna entrada se inventa: cada una cita s
 
 | # | Asunto | Por qué bloquea | Origen |
 |--:|---|---|---|
-| A1 | **`openspec validate --all --strict` nunca se ha ejecutado.** `npx` y `node` están denegados en `.claude/settings.json` y `opencode.json`. Toda la validación estructural ha sido manual | F2 importa Chasqui: habrá muchos más changes que validar, y la validación manual no escala. Decidir: abrir el permiso, o declarar por escrito que la validación es manual | `abierto[]` de `F1/orquestacion` |
-| A2 | **No existe `PLAN/F2-execplan.md` ni `TAREAS/F2/`.** Sin ellos ningún agente tiene alcance pre-aprobado | Es la fase entera. `AGENTS.md` § Nivel de autonomía ya lo refleja: sin fase abierta, todo es clase C | esta reorganización |
-| A3 | **Alcance real de F2.** `PLAN/F1-execplan.md` la describe como «importar Chasqui», pero el origen (`/mnt/datos/Programacion/chasqui_n8n`) sigue siendo sólo-lectura y nadie ha inventariado qué contiene ni cuánto es | Sin inventario del origen, el presupuesto de F2 es una adivinanza | `PLAN/F1-execplan.md` § Propósito |
+| A1 | **`openspec validate --all --strict` nunca se ha ejecutado.** `npx` y `node` están denegados en `../metodologia/adapters/claude/settings.json` y `opencode.json`. Toda la validación estructural ha sido manual | F2 importa Chasqui: habrá muchos más changes que validar, y la validación manual no escala. Decidir: abrir el permiso, o declarar por escrito que la validación es manual | `abierto[]` de `F1/orquestacion` |
+| A2 | **No hay fase publicada en `fase-activa/`.** Sin ExecPlan ni tareas ningún agente tiene alcance pre-aprobado. El plan del que saldría está por escribir (`../../conocimiento/plan/README.md`), bloqueado por DEC-1 y DEC-2 | Es la fase entera. `../../metodologia/AGENTS.md` § Nivel de autonomía ya lo refleja: sin fase abierta, todo es clase C | esta reorganización |
+| A3 | **Alcance real de F2.** `ARCHIVO/fases/F1/execplan.md` la describe como «importar Chasqui», pero el origen (`/mnt/datos/Programacion/chasqui_n8n`) sigue siendo sólo-lectura y nadie ha inventariado qué contiene ni cuánto es | Sin inventario del origen, el presupuesto de F2 es una adivinanza | `ARCHIVO/fases/F1/execplan.md` § Propósito |
 
 ---
 
@@ -23,7 +23,7 @@ Fecha de consolidación: 2026-09-01. Ninguna entrada se inventa: cada una cita s
 
 Los cuatro límites del modelo están **verificados empíricamente** por los Verificadores de
 T02 y T05, con comandos de reproducción en
-`openspec/changes/archive/f1-decision-chain/proposal.md`. No se corrigieron en F1 porque
+`../QUIPU_ENTERPRISE/openspec/changes/archive/f1-decision-chain/proposal.md`. No se corrigieron en F1 porque
 estaban fuera del alcance textual de las tareas, no por descuido.
 
 | # | Límite | Naturaleza | Recomendación |
@@ -54,16 +54,16 @@ resolverlos primero tiene mejor retorno que cualquier optimización de contexto.
 
 ## D. Deuda del propio Sistema A — el proyecto de la flota
 
-Origen: `PLAN/FLOTA/PLAN_IMPLEMENTACION.md` §6.4. **Nada de esto aparecía en
+Origen: `../metodologia/archivo/FLOTA/PLAN_IMPLEMENTACION.md` §6.4. **Nada de esto aparecía en
 `ESTADO/ESTADO.md`**: era deuda invisible.
 
 | # | Asunto | Estado real |
 |--:|---|---|
-| D1 | **Paso 1.0 — normalizar el esquema de checkpoint.** El plan lo marcaba bloqueante de la Ola 1 y no se hizo | Parcialmente superado: `bin/checkpoint.sh` ya impone el contrato desde el 31-08, así que la deriva **nueva** está cortada. Lo que queda son las 41 entradas antiguas, que el ledger append-only no reescribe |
+| D1 | **Paso 1.0 — normalizar el esquema de checkpoint.** El plan lo marcaba bloqueante de la Ola 1 y no se hizo | Parcialmente superado: `../metodologia/scripts/checkpoint.sh` ya impone el contrato desde el 31-08, así que la deriva **nueva** está cortada. Lo que queda son las 41 entradas antiguas, que el ledger append-only no reescribe |
 | D2 | **Ola 2 — estabilidad de prefijo entre sesiones** | Sin empezar |
 | D3 | **§3.3 — consulta de MISS por relectura.** Es el KPI que valida la Ola 1 | Sin hacer: la mejora de −97,7 % en tamaño de lectura está medida, pero su efecto en coste no |
 | D4 | **Ola 3 (gate determinista) se construyó estando RETIRADA** y ninguna de sus tres condiciones de reapertura se cumple hoy (bash 17,5 % vs ≥25 %; 1 sesión de Verificador vs ≥10) | Coste de tenerlo sin usar: cero. `QUIPU_VERIF_DETERMINISTA` en `0` por omisión, racha de sombra 0/5, y pasar a vinculante es decisión humana |
-| D5 | La flota se portó a Claude Code el 26-08, así que `bin/metricas.sh` —que lee `opencode.db`— **ya no ve la actividad real** | La instrumentación de coste quedó ciega tras el port |
+| D5 | La flota se portó a Claude Code el 26-08, así que `../metodologia/scripts/metricas.sh` —que lee `opencode.db`— **ya no ve la actividad real** | La instrumentación de coste quedó ciega tras el port |
 
 D5 es el que más conviene mirar antes de invertir más en D2/D3: optimizar contra una
 telemetría que ya no se alimenta es trabajo perdido.

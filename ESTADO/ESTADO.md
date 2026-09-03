@@ -11,7 +11,7 @@
 | block-workflow   | completa | Ciclo de vida del bloque: grafo cerrado de transiciones (`backlog→ready→in_progress→verifying→done`, con `blocked`), gates evaluados en Postgres (dependencias `done`, contract locks activos) y cierre sólo humano (`block.approve`, `human_admin`). |
 | traceability     | completa | Microtarea por entregable, ningún criterio `met` sin evidencia enlazada (`trg_bac_before_met`), evidencia con contenido real, enlaces M:N dentro del mismo bloque y gate que reporta por cuánto falla más los tipos de evidencia exigidos. |
 | demand-chain     | completa | Cadena necesidad→cambio→requisito→enlace impuesta por triggers/CHECKs (anclaje, grafo de estados del cambio como dato, sellado de enlaces, firmas humanas); incluye vía rápida con deuda controlada y retrofit con cobertura (`fn_retrofit_exige_requisito`). Desde F1/T05, el grafo de estados del cambio también responde a `fn_cambio_sin_contradicciones` (ver `decision-chain`): `MODIFIED Requirements` sincronizado. |
-| decision-chain   | completa | La mitad normativa del método (F1, port de Chasqui): `dominio` (vocabulario global), `decision` con grafo `decision_supersede` sin ciclos, `invariante` con evidencia `ruta:símbolo`, `contradiccion` que congela por dominio. Promoción de decisión y resolución de contradicción son actos humanos (firma `promuevo`/`human_admin` y ability `contradiccion:resolver`, ambos gates en Postgres); un agente sólo propone y abre. Límites declarados del modelo (TRUNCATE, no-deferrable de `trg_supersede_no_huerfana`, RESTRICT de `fk_ds_sucesora`, orden de triggers en `cambio`) en `openspec/changes/archive/f1-decision-chain/proposal.md`. |
+| decision-chain   | completa | La mitad normativa del método (F1, port de Chasqui): `dominio` (vocabulario global), `decision` con grafo `decision_supersede` sin ciclos, `invariante` con evidencia `ruta:símbolo`, `contradiccion` que congela por dominio. Promoción de decisión y resolución de contradicción son actos humanos (firma `promuevo`/`human_admin` y ability `contradiccion:resolver`, ambos gates en Postgres); un agente sólo propone y abre. Límites declarados del modelo (TRUNCATE, no-deferrable de `trg_supersede_no_huerfana`, RESTRICT de `fk_ds_sucesora`, orden de triggers en `cambio`) en `../QUIPU_ENTERPRISE/openspec/changes/archive/f1-decision-chain/proposal.md`. |
 | mcp-interface    | completa | 2 transportes (HTTP `POST /mcp` con `auth:sanctum` y STDIO `mcp:start quipu` con `QUIPU_AGENT_TOKEN`) sobre un solo motor; errores 422/403 nunca 500; sin tool de aprobación. 46 tools en `code/api/app/Mcp/Tools/` (conteo real de archivos: 40 en F0/T04 + 6 de `decision-chain` en F1/T03-T04). |
 
 ## En diseño / siguiente
@@ -65,14 +65,14 @@
   superadas; `trg_cambio_autorizado` se dispara antes que `trg_cambio_sin_contradicciones`
   (orden alfabético de Postgres) y por eso un cambio sin firma y congelado muestra primero el
   error de firma. Detalle y comandos de reproducción en
-  `openspec/changes/archive/f1-decision-chain/proposal.md`.
+  `../QUIPU_ENTERPRISE/openspec/changes/archive/f1-decision-chain/proposal.md`.
 - Grafo de transiciones de `decision` (hallazgo S4, resurrección `superada → vigente`) diferido
   a F2 por decisión humana (T06).
 
 ## Deuda del propio Sistema A (antes invisible)
 
-El proyecto de optimización de contexto de la flota (`PLAN/FLOTA/PLAN_IMPLEMENTACION.md`)
+El proyecto de optimización de contexto de la flota (`../metodologia/archivo/FLOTA/PLAN_IMPLEMENTACION.md`)
 entregó todo `bin/`, el modo sombra y el contrato mecánico de checkpoint, pero nunca entró
-en este inventario. Sus cinco pendientes —incluido que `bin/metricas.sh` quedó ciego tras
+en este inventario. Sus cinco pendientes —incluido que `../metodologia/scripts/metricas.sh` quedó ciego tras
 el port a Claude Code— están en `DEUDA-F2.md` § D, y el trabajo que los produjo, sin tarea
 que lo encargara, en `ARCHIVO/TRABAJO-SIN-TAREA.md`.

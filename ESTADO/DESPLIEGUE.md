@@ -28,7 +28,7 @@ sólo sabe descubrir ahí:
 | `opencode.json` | config del Sistema A: modelo por defecto, permisos, `instructions` |
 | `.opencode/agents/{orquestador,ejecutor,verificador}.md` | copia desplegada de `sistema-a/.opencode/agents/` |
 | `opencode.ui.json` | config alternativa para trabajo de UI (agentes ui-* + MCPs). No se carga sola |
-| `.opencode/estilo-ui.md` | reglas de estilo del front (antes mal ubicada dentro de `agents/`) |
+| `../metodologia/contexto/estilo-ui.md` | reglas de estilo del front (antes mal ubicada dentro de `agents/`) |
 
 `AGENTS.md` se carga vía `"instructions": ["CLAUDE.md", "sistema-a/AGENTS.md"]`
 en vez de copiarse a la raíz — así el contrato tiene un solo original. Por eso las rutas
@@ -62,7 +62,7 @@ de un `export`: sin él, el modo sombra no recoge nada y la racha se queda en 0 
 | `1` | vinculante: `FALLA` rechaza. **Sólo tras 5/5** — lo autoriza el humano, no la flota |
 
 El estado se consulta con `bin/sombra.sh estado`; el criterio de corte y el de
-rollback están en `NORMATIVA/VALIDACION.md`.
+rollback están en `../metodologia/normativa/VALIDACION.md`.
 
 ### Herramientas del paquete (`bin/`)
 
@@ -70,7 +70,7 @@ rollback están en `NORMATIVA/VALIDACION.md`.
 |---|---|
 | `flota.sh` | arranca la flota con el entorno correcto |
 | `estado.sh` | proyección compacta de `progress.json` — **léelo en vez del ledger entero** |
-| `checkpoint.sh` | valida contra `NORMATIVA/HANDOFF.md` y anexa al ledger; `auditar` mide la deriva |
+| `checkpoint.sh` | valida contra `../metodologia/normativa/HANDOFF.md` y anexa al ledger; `auditar` mide la deriva |
 | `metricas.sh` | consumo LLM por sesión y por agente desde la base de opencode (sólo lectura) |
 | `verificar.sh` | pasos mecánicos del Verificador → JSON `veredicto_mecanico` |
 | `sombra.sh` | registro de discrepancias del modo sombra y criterio de corte |
@@ -132,7 +132,7 @@ El contrato es idéntico; lo único que cambia es quién despacha (tú en vez de
 
 ## 5. Al cerrar una fase
 
-- Los checkpoints quedan en `.session/progress.json` (append-only): es tu registro de
+- Los checkpoints quedan en `sesiones/progress.json` (append-only): es tu registro de
   auditoría de la flota.
 - Fusiona las worktrees aprobadas a `main` en orden de dependencias, corre CI final y
   borra las worktrees (`git worktree remove …`). La rama principal es **main** (post-F0).
